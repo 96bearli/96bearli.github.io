@@ -1,0 +1,170 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="http://example.com">
+  
+  <title>crouton shell(sd) | 熊窝</title>
+  <meta name="author" content="Bear">
+  
+  <meta name="description" content="今天是过去最好的结果">
+  
+  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <meta property="og:title" content="crouton shell(sd)"/>
+  <meta property="og:site_name" content="熊窝"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="alternate" href="/atom.xml" title="熊窝" type="application/atom+xml">
+
+  <link rel="preload" as="style" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+  <link href="https://unpkg.com" rel="dns-prefetch" />
+  <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
+  <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div class="container">
+    <div class="left-col" style="background-image:url('/images/social/007S8ZIlgy1ggdmi6yapmj30dw0zk0wm.jpg')">
+      <div class="intrude-less">
+        <header id="header" class="inner">
+          <a href="/">
+            <div class="profilepic"><img src='/images/social/avatar.jpg'></div>
+          </a>
+          <div class="author-name"><a href="/">Bear</a></div>
+          <p class="aboutme">今天是过去最好的结果</p>
+          <nav id="main-nav">
+            <ul class="main">
+              
+              <li>
+                
+                  <a href="/archives">归档</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/categories">专题</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/friendlinks">友链</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/life">关于</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/search">搜索</a>
+                
+              </li>
+              
+            </ul>
+          </nav>
+          <nav id="sub-nav">
+            <div class="social">
+              
+              <a class="twitter" target="_blank" rel="noopener" href="https://twitter.com/" title="Twitter">Twitter</a>
+              
+              
+              
+              <a class="github" target="_blank" rel="noopener" href="https://github.com/" title="Github">Github</a>
+              
+              
+              <a class="yuque" target="_blank" rel="noopener" href="https://yuque.com/" title="语雀">语雀</a>
+              
+
+              
+              <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+              
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="mid-col">
+      <div class="mid-col-container">
+        <div id="content" class="inner">
+          <article class="post">
+
+  
+    <div class="meta">
+      
+<div class="date">
+
+<time datetime="2020-11-28T13:19:58.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  2020-11-28
+</time>
+
+
+
+
+
+</div>
+
+    </div>
+  
+  <h1 class="title" itemprop="name">crouton shell(sd)</h1>
+  <div class="entry-content" itemprop="articleBody">
+    
+    <div class="post-toc">
+      <div class="toc-title">TOC</div>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E"><span class="toc-number">1.</span> <span class="toc-text">关于</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BC%98%E7%82%B9"><span class="toc-number">2.</span> <span class="toc-text">优点</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%84%9A%E6%9C%AC"><span class="toc-number">3.</span> <span class="toc-text">脚本</span></a></li></ol>
+    </div>
+    
+    <h1 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h1><p>我在Chromebook上通过crouton安装了ubuntu，安装方法请看之前博客文章，为了扩展储存，我将系统转移到了sd卡。本博文就是为了解决每次进入sd卡chroot多条命令的省略</p>
+<h1 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h1><ul>
+<li>省略每次命令的输入</li>
+<li>每次休眠后变化后的sd卡路径自动获取</li>
+<li>一键重设开发者root密码</li>
+</ul>
+<h1 id="脚本"><a href="#脚本" class="headerlink" title="脚本"></a>脚本</h1><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">任意键继续的模块</span></span><br><span class="line">get_char()</span><br><span class="line">        &#123;</span><br><span class="line">        SAVEDSTTY=`stty -g`</span><br><span class="line">        stty -echo</span><br><span class="line">        stty cbreak</span><br><span class="line">        dd if=/dev/tty bs=1 count=1 2&gt; /dev/null</span><br><span class="line">        stty -raw</span><br><span class="line">        stty echo</span><br><span class="line">        stty $SAVEDSTTY</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line"><span class="meta">#</span><span class="bash">sh printtime.sh</span></span><br><span class="line"><span class="meta">#</span><span class="bash">该shell直接输出本地时间</span></span><br><span class="line">time1=$(date +%Y-%m-%d\ %H:%M:%S)</span><br><span class="line"><span class="meta">#</span><span class="bash">currentTimeStamp=`date +%s -d <span class="string">&quot;<span class="variable">$time1</span>&quot;</span>`</span></span><br><span class="line"><span class="meta">#</span><span class="bash">time1=$((<span class="variable">$currentTimeStamp</span>+<span class="number">28800</span>))</span></span><br><span class="line"><span class="meta">#</span><span class="bash">time1=$(date +%Y-%m-%d\ %H:%M:%S -d <span class="string">&quot;1970-01-01 UTC <span class="variable">$time1</span> seconds&quot;</span>);</span></span><br><span class="line">echo 现在是北京时间：$time1</span><br><span class="line"></span><br><span class="line">sleep 0.6</span><br><span class="line">echo &quot;管理员Bear您好&quot;</span><br><span class="line">echo &quot;您即将进入chroot&quot;</span><br><span class="line">echo &quot;您安装的是ubuntu16.04&quot;</span><br><span class="line">echo &quot;请输入序号选择要进入的方式&quot;</span><br><span class="line">echo &quot;1) Start xfce_sd&quot;</span><br><span class="line">echo &quot;2) Start shell_sd&quot;</span><br><span class="line">echo &quot;3) echo shell_sd&quot;</span><br><span class="line">echo &quot;4) xfce in window&quot;</span><br><span class="line">echo &quot;5) Start xfce_local&quot;</span><br><span class="line">echo &quot;6) Start shell_local&quot;</span><br><span class="line">echo &quot;7) app in window&quot;</span><br><span class="line">echo &quot;8) xfce in tab&quot;</span><br><span class="line">echo &quot;9) resolve.sh&quot;</span><br><span class="line"></span><br><span class="line">read number</span><br><span class="line">case $number in</span><br><span class="line">1)echo &quot;正在启动桌面xfce_sd&quot;</span><br><span class="line">sdpath=$(sudo fdisk -l |grep -C 0 &quot;HPFS/NTFS/exFAT&quot;  |cut -c1-9)</span><br><span class="line">echo 正在挂载$sdpath到/media/removable/linux</span><br><span class="line">sudo umount $sdpath</span><br><span class="line">sudo mkdir /media/removable/linux</span><br><span class="line">sudo mount $sdpath /media/removable/linux</span><br><span class="line">echo 正在启动xfce桌面，请输入密码1</span><br><span class="line">sudo /media/removable/linux/bin/startxfce4</span><br><span class="line">;;</span><br><span class="line"></span><br><span class="line">2)echo &quot;正在进入命令行shell_sd&quot;</span><br><span class="line">sdpath=$(sudo fdisk -l |grep -C 0 &quot;HPFS/NTFS/exFAT&quot;  |cut -c1-9)</span><br><span class="line">echo 正在挂载$sdpath到/media/removable/linux</span><br><span class="line">sudo umount $sdpath</span><br><span class="line">sudo mkdir /media/removable/linux</span><br><span class="line">sudo mount $sdpath /media/removable/linux</span><br><span class="line">echo 正在进入命令行，请输入密码1</span><br><span class="line">sudo /media/removable/linux/bin/enter-chroot</span><br><span class="line">;;</span><br><span class="line"></span><br><span class="line">3)echo &quot;显示sd shell&quot;</span><br><span class="line">grep -A 8 &quot;正在启动桌面xfce_sd&quot; enterchroot.sh</span><br><span class="line">;;</span><br><span class="line"></span><br><span class="line">4)echo &quot;以窗口模式启动桌面xfce&quot;</span><br><span class="line">sdpath=$(sudo fdisk -l |grep -C 0 &quot;HPFS/NTFS/exFAT&quot;  |cut -c1-9)</span><br><span class="line">echo 正在挂载$sdpath到/media/removable/linux</span><br><span class="line">sudo umount $sdpath</span><br><span class="line">sudo mkdir /media/removable/linux</span><br><span class="line">sudo mount $sdpath /media/removable/linux</span><br><span class="line">sudo /media/removable/linux/bin/startxfce4 -X xiwi</span><br><span class="line">;;</span><br><span class="line"></span><br><span class="line">5)echo &quot;正在启动桌面xfce_local&quot;</span><br><span class="line">sudo startxfce4</span><br><span class="line">;;</span><br><span class="line"></span><br><span class="line">6)echo &quot;正在进入命令行shell_local&quot;</span><br><span class="line">sudo enter-chroot</span><br><span class="line">;;</span><br><span class="line"></span><br><span class="line">7)echo &quot;以下为窗口运行ubuntu软件的命令,手动复制执行&quot;</span><br><span class="line">echo &quot;sudo /media/removable/linux/bin/enter-chroot -b xiwi typorae&quot;</span><br><span class="line">echo 按任意键继续显示...</span><br><span class="line">char=`get_char`</span><br><span class="line">sleep 0.6</span><br><span class="line">echo &quot;help:   https://github.com/dnschneid/crouton/wiki/crouton-in-a-Chromium-OS-window-%28xiwi%29&quot;</span><br><span class="line">;;</span><br><span class="line"></span><br><span class="line">8)echo &quot;以下为标签运行xfce的命令并自动运行&quot;</span><br><span class="line">echo &quot;sudo /media/removable/linux/bin/startxfce4 -X xiwi-tabtee&quot;</span><br><span class="line">sleep 0.6</span><br><span class="line">echo 确认继续执行请按任意键继续...</span><br><span class="line">char=`get_char`</span><br><span class="line">sdpath=$(sudo fdisk -l |grep -C 0 &quot;HPFS/NTFS/exFAT&quot;  |cut -c1-9)</span><br><span class="line">echo 正在挂载$sdpath到/media/removable/linux</span><br><span class="line">sudo umount $sdpath</span><br><span class="line">sudo mkdir /media/removable/linux</span><br><span class="line">sudo mount $sdpath /media/removable/linux</span><br><span class="line">echo 正在启动xfce桌面，请输入密码1</span><br><span class="line">sudo /media/removable/linux/bin/startxfce4 -X xiwi-tabtee</span><br><span class="line">;;</span><br><span class="line"></span><br><span class="line">9)echo &quot;常见问题通道&quot;</span><br><span class="line"><span class="meta">#</span><span class="bash">sh /resolve.sh</span></span><br><span class="line">echo &quot;Bear遇到的问题并完美解决（懒得记）的代码&quot;</span><br><span class="line">echo &quot;任务开始执行没有再次确认，且无法挽回，建议看代码&quot;</span><br><span class="line">sleep 1</span><br><span class="line">echo &quot;所以你要解决什么问题？&quot;</span><br><span class="line">sleep 0.6</span><br><span class="line">echo &quot;1）重设开发者root密码&quot;</span><br><span class="line">echo &quot;2) 解决Read-only file system&quot;</span><br><span class="line">echo &quot;3) 锁启动签名&quot;</span><br><span class="line">read number</span><br><span class="line">case $number in</span><br><span class="line">1)echo &quot;正在重设开发者root密码&quot;</span><br><span class="line">echo 确认继续执行请按任意键继续...</span><br><span class="line">char=`get_char`</span><br><span class="line">echo &quot;请进行2-3次的密码输入&quot;</span><br><span class="line">sudo chromeos-setdevpasswd</span><br><span class="line">echo &quot;执行完毕，password已修改&quot;</span><br><span class="line">;;</span><br><span class="line">2)echo &quot;正在设定为WR读写&quot;</span><br><span class="line">echo 确认继续执行请按任意键继续...</span><br><span class="line">char=`get_char`</span><br><span class="line">sudo /usr/share/vboot/bin/make_dev_ssd.sh --remove_rootfs_verification --partitions 4</span><br><span class="line">echo &quot;执行完毕，重启生效&quot;</span><br><span class="line">;;</span><br><span class="line">3)echo &quot;或许你做了个不明智的决定&quot;</span><br><span class="line">echo 确认继续执行请按任意键继续...</span><br><span class="line">char=`get_char`</span><br><span class="line">sudo crossystem dev_boot_signed_only=1</span><br><span class="line">echo &quot;执行完毕，重启生效&quot;</span><br><span class="line">;;</span><br><span class="line">esac</span><br><span class="line">;;</span><br><span class="line">esac</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+  </div>
+
+</article>
+
+
+  <nav id="pagenavi">
+    
+    
+    <a href="/2020/11/28/hello-world/" class="next">下一篇：Hello World</a>
+    
+  </nav>
+
+        </div>
+        
+        
+      </div>
+      <footer id="footer" class="inner">
+        © 2020 - Bear -
+        <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
+        <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
+      </footer>
+    </div>
+  </div>
+  
+  <script async defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  <script async defer src="https://s5.cnzz.com/z_stat.php?id=1276809529&web_id=1276809529"></script>
+  
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="http://example.com">
+  
+  <title>JavaScript初学笔记3||循环 数组 冒泡排序 | 熊窝</title>
+  <meta name="author" content="Bear">
+  
+  <meta name="description" content="今天是过去最好的结果">
+  
+  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <meta property="og:title" content="JavaScript初学笔记3||循环 数组 冒泡排序"/>
+  <meta property="og:site_name" content="熊窝"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="alternate" href="/atom.xml" title="熊窝" type="application/atom+xml">
+
+  <link rel="preload" as="style" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+  <link href="https://unpkg.com" rel="dns-prefetch" />
+  <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
+  <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div class="container">
+    <div class="left-col" style="background-image:url('/images/social/007S8ZIlgy1ggdmi6yapmj30dw0zk0wm.jpg')">
+      <div class="intrude-less">
+        <header id="header" class="inner">
+          <a href="/">
+            <div class="profilepic"><img src='/images/social/avatar.jpg'></div>
+          </a>
+          <div class="author-name"><a href="/">Bear</a></div>
+          <p class="aboutme">今天是过去最好的结果</p>
+          <nav id="main-nav">
+            <ul class="main">
+              
+              <li>
+                
+                  <a href="/archives">归档</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/categories">专题</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/friendlinks">友链</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/life">关于</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/search">搜索</a>
+                
+              </li>
+              
+            </ul>
+          </nav>
+          <nav id="sub-nav">
+            <div class="social">
+              
+              <a class="twitter" target="_blank" rel="noopener" href="https://twitter.com/" title="Twitter">Twitter</a>
+              
+              
+              
+              <a class="github" target="_blank" rel="noopener" href="https://github.com/" title="Github">Github</a>
+              
+              
+              <a class="yuque" target="_blank" rel="noopener" href="https://yuque.com/" title="语雀">语雀</a>
+              
+
+              
+              <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+              
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="mid-col">
+      <div class="mid-col-container">
+        <div id="content" class="inner">
+          <article class="post">
+
+  
+    <div class="meta">
+      
+<div class="date">
+
+<time datetime="2019-12-25T20:39:14.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  2019-12-26
+</time>
+
+
+
+
+
+</div>
+
+    </div>
+  
+  <h1 class="title" itemprop="name">JavaScript初学笔记3||循环 数组 冒泡排序</h1>
+  <div class="entry-content" itemprop="articleBody">
+    
+    <p> // JavaScript初学笔记3循环 数组 冒泡排序</p>
+<p>/* for(;;)<br>log(“LOL\n”); */<br>/* while(true)<br>log(“LOL\n”); */<br>/* do log(“LOL\n”);<br>while(true); */<br>/* var a=3<br>for(;;)<br>log(“LOL\n”+a);//log的复合打印写法 和 牛X的不加;也能运行 */</p>
+<p>/* var number =[1,2,3,4,5,6];<br>//数组的表示<br>/* log(number[0],number[1]+number[2]);//尝试输出1 5<br>log(number[0],number[1],number[2]);//right<br>log(number.length);//length */<br>/* for(let count=0;count&lt;number.length;count++)<br>log(number[count]); //以上二者的结合*/</p>
+<p>// number.push(100);//数组放入<br>// number.shift();//删除左侧第一个 队列先进先出?<br>// number.pop();//删除右侧最后一个 所以什么结构？*/<br>//log(number)  </p>
+<p>/* var messages=”helloworld”;<br>var result=messages.split(“”);<br>log (result[0]+”\n”);<br>log (result[1]);//转为了两个小的字符串，分别存入 好奇内在<br> */</p>
+<p>/* //由大到小冒泡排序<br>var number =[16,23,3,48,15,46,75,123,54,11,2,8,33];<br>//while(number.length===100)number.push(random(1,140));<br>//var kk=number.length;<br>for(let i=0;i&lt;number.length-1;i++)<br>{<br>    //for(let j=0;j&lt;kk-1;j++)//kk的自减可以改成<br>    for(let j=0;j&lt;number.length-1-i;j++)<br>    {<br>        if(number[j]&lt;number[j+1])//如果小到大这里改为&gt;<br>        {let a=number[j];<br>            number[j]=number[j+1];<br>            number[j+1]=a;<br>        }<br>    }<br>}<br>log(number); */</p>
+
+  </div>
+
+</article>
+
+
+  <nav id="pagenavi">
+    
+    <a href="/2020/02/13/chromebook折腾全攻略/" class="prev">上一篇：Chromebook折腾全攻略</a>
+    
+    
+    <a href="/2019/12/26/javascript初学笔记2定义类型-取整-循环/" class="next">下一篇：JavaScript初学笔记2||定义类型 取整 循环</a>
+    
+  </nav>
+
+        </div>
+        
+        
+      </div>
+      <footer id="footer" class="inner">
+        © 2020 - Bear -
+        <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
+        <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
+      </footer>
+    </div>
+  </div>
+  
+  <script async defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  <script async defer src="https://s5.cnzz.com/z_stat.php?id=1276809529&web_id=1276809529"></script>
+  
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="http://example.com">
+  
+  <title>让WordPress首页显示文章摘要 | 熊窝</title>
+  <meta name="author" content="Bear">
+  
+  <meta name="description" content="今天是过去最好的结果">
+  
+  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <meta property="og:title" content="让WordPress首页显示文章摘要"/>
+  <meta property="og:site_name" content="熊窝"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="alternate" href="/atom.xml" title="熊窝" type="application/atom+xml">
+
+  <link rel="preload" as="style" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+  <link href="https://unpkg.com" rel="dns-prefetch" />
+  <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
+  <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div class="container">
+    <div class="left-col" style="background-image:url('/images/social/007S8ZIlgy1ggdmi6yapmj30dw0zk0wm.jpg')">
+      <div class="intrude-less">
+        <header id="header" class="inner">
+          <a href="/">
+            <div class="profilepic"><img src='/images/social/avatar.jpg'></div>
+          </a>
+          <div class="author-name"><a href="/">Bear</a></div>
+          <p class="aboutme">今天是过去最好的结果</p>
+          <nav id="main-nav">
+            <ul class="main">
+              
+              <li>
+                
+                  <a href="/archives">归档</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/categories">专题</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/friendlinks">友链</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/life">关于</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/search">搜索</a>
+                
+              </li>
+              
+            </ul>
+          </nav>
+          <nav id="sub-nav">
+            <div class="social">
+              
+              <a class="twitter" target="_blank" rel="noopener" href="https://twitter.com/" title="Twitter">Twitter</a>
+              
+              
+              
+              <a class="github" target="_blank" rel="noopener" href="https://github.com/" title="Github">Github</a>
+              
+              
+              <a class="yuque" target="_blank" rel="noopener" href="https://yuque.com/" title="语雀">语雀</a>
+              
+
+              
+              <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+              
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="mid-col">
+      <div class="mid-col-container">
+        <div id="content" class="inner">
+          <article class="post">
+
+  
+    <div class="meta">
+      
+<div class="date">
+
+<time datetime="2019-09-13T18:46:46.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  2019-09-14
+</time>
+
+
+
+
+
+</div>
+
+    </div>
+  
+  <h1 class="title" itemprop="name">让WordPress首页显示文章摘要</h1>
+  <div class="entry-content" itemprop="articleBody">
+    
+    <p>wordpress首页显示全文不但拖慢了加载速度，还覆盖了好的文章，浪费页面空间。之前为了这个解决问题查了不少资料。终于在<a target="_blank" rel="noopener" href="https://www.iteblog.com/archives/21.html">过往记忆该篇文章</a>（此处致谢！）的帮助下完成了这一操作，但部分内容因为<strong>主题不同略有区别。</strong></p>
+<p>原教程使用的 主题Twenty Twelve ，我是用的Twenty Fifteen。</p>
+<p>下面贴出原教程和对应的改动。</p>
+<hr>
+<p><strong><em>原教程：</em></strong></p>
+<p>到wordpress后台，依次选择 <strong>外观–&gt;编辑–&gt;选择右边的index.php文件</strong>，在里面可以看到语句</p>
+<p><code>&lt;?php</code> <code>while</code> <code>( have_posts() ) : the_post(); ?&gt;``&lt;?php get_template_part(</code> <code>&#39;content&#39;``, get_post_format() ); ?&gt;``&lt;?php</code> <code>endwhile``; ?&gt;</code></p>
+<p>可以看出，index.php是嵌套一个 content.php 的文件用于专门显示文章的内容，这就是为什么在首页老是显示文章全文。那么，打开content.php文件找到</p>
+<p><code>&lt;?php</code> <code>the_content( __(</code> <code>&#39;Continue reading &lt;span&gt;&amp;rarr;&lt;/span&gt;&#39;``,</code> <code>&#39;twentyeleven&#39;</code> <code>) );</code> <code>?&gt;</code></p>
+<p>将它修改为</p>
+<p><code>&lt;?php if(!is_single()) &#123;the_excerpt();&#125; else</code> <code>&#123;the_content(__(&#39;(more…)&#39;));&#125; ?&gt;</code></p>
+<p><strong>改动</strong>：</p>
+<p>可以看到原教程分成三步</p>
+<p>第一步经验证完全符合，</p>
+<p>第二步第三步：</p>
+<p>找到line32–line37</p>
+<p>the_content(<br>sprintf(<br>__( ‘Continue reading %s’, ‘twentyfifteen’ ),<br>the_title( ‘<span class="screen-reader-text">‘, ‘</span>‘, false )<br>)<br>);</p>
+<p>替换为：</p>
+<p><code>if(!is_single()) &#123;the_excerpt();&#125; else</code> <code>&#123;the_content(__(&#39;(more…)&#39;));&#125;</code></p>
+<hr>
+<p>OK，over。其他主题照情况来改就行</p>
+<p>友情提示，修改前最好做个备份避免网站崩溃。</p>
+<p><img src="http://bear962464.cn/wp-content/uploads/2019/08/get.jpg"></p>
+<p><a target="_blank" rel="noopener" href="http://bear962464.cn/2019/09/07/370/">http://bear962464.cn/2019/09/07/370/</a></p>
+
+  </div>
+
+</article>
+
+
+  <nav id="pagenavi">
+    
+    <a href="/2019/09/15/中国式家长-之后的思考/" class="prev">上一篇：中国式家长 - 之后的思考</a>
+    
+    
+    <a href="/2019/09/13/关于本站作者权限申请/" class="next">下一篇：关于本站作者权限申请</a>
+    
+  </nav>
+
+        </div>
+        
+        
+      </div>
+      <footer id="footer" class="inner">
+        © 2020 - Bear -
+        <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
+        <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
+      </footer>
+    </div>
+  </div>
+  
+  <script async defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  <script async defer src="https://s5.cnzz.com/z_stat.php?id=1276809529&web_id=1276809529"></script>
+  
+</body>
+</html>

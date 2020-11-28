@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="http://example.com">
+  
+  <title>通过crouton安装Ubuntu | 熊窝</title>
+  <meta name="author" content="Bear">
+  
+  <meta name="description" content="今天是过去最好的结果">
+  
+  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <meta property="og:title" content="通过crouton安装Ubuntu"/>
+  <meta property="og:site_name" content="熊窝"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="alternate" href="/atom.xml" title="熊窝" type="application/atom+xml">
+
+  <link rel="preload" as="style" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+  <link href="https://unpkg.com" rel="dns-prefetch" />
+  <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
+  <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div class="container">
+    <div class="left-col" style="background-image:url('/images/social/007S8ZIlgy1ggdmi6yapmj30dw0zk0wm.jpg')">
+      <div class="intrude-less">
+        <header id="header" class="inner">
+          <a href="/">
+            <div class="profilepic"><img src='/images/social/avatar.jpg'></div>
+          </a>
+          <div class="author-name"><a href="/">Bear</a></div>
+          <p class="aboutme">今天是过去最好的结果</p>
+          <nav id="main-nav">
+            <ul class="main">
+              
+              <li>
+                
+                  <a href="/archives">归档</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/categories">专题</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/friendlinks">友链</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/life">关于</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/search">搜索</a>
+                
+              </li>
+              
+            </ul>
+          </nav>
+          <nav id="sub-nav">
+            <div class="social">
+              
+              <a class="twitter" target="_blank" rel="noopener" href="https://twitter.com/" title="Twitter">Twitter</a>
+              
+              
+              
+              <a class="github" target="_blank" rel="noopener" href="https://github.com/" title="Github">Github</a>
+              
+              
+              <a class="yuque" target="_blank" rel="noopener" href="https://yuque.com/" title="语雀">语雀</a>
+              
+
+              
+              <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+              
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="mid-col">
+      <div class="mid-col-container">
+        <div id="content" class="inner">
+          <article class="post">
+
+  
+    <div class="meta">
+      
+<div class="date">
+
+<time datetime="2020-02-12T19:53:10.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  2020-02-13
+</time>
+
+
+
+
+
+</div>
+
+    </div>
+  
+  <h1 class="title" itemprop="name">通过crouton安装Ubuntu</h1>
+  <div class="entry-content" itemprop="articleBody">
+    
+    <div class="post-toc">
+      <div class="toc-title">TOC</div>
+      <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-%E5%85%B3%E4%BA%8Ecrouton"><span class="toc-number">1.</span> <span class="toc-text">1.关于crouton</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-%E5%A4%87%E4%BB%BDChrome-OS"><span class="toc-number">2.</span> <span class="toc-text">2.备份Chrome OS</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-%E8%BF%9B%E5%85%A5%E5%BC%80%E5%8F%91%E8%80%85%E6%A8%A1%E5%BC%8F"><span class="toc-number">3.</span> <span class="toc-text">3.进入开发者模式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A8%E6%89%8B%E8%83%BD%E5%8A%9B%E5%BC%BA%E6%9C%89%E5%9F%BA%E7%A1%80%E7%9A%84%E5%90%8C%E5%AD%A6%E6%8E%A5%E4%B8%8B%E6%9D%A5%E5%8F%AF%E4%BB%A5%E5%8F%82%E8%80%83%E6%9C%AC%E6%96%87%E9%A6%96Crouton%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3%E8%BF%9B%E8%A1%8C%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AE%89%E8%A3%85"><span class="toc-number">4.</span> <span class="toc-text">动手能力强有基础的同学接下来可以参考本文首Crouton官方文档进行自定义安装</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BB%A5%E4%B8%8B%E6%98%AF%E6%88%91%E5%AE%89%E8%A3%85%E6%97%B6%E7%9A%84%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="toc-number"></span> <span class="toc-text">以下是我安装时的步骤：</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%88%A0%E9%99%A4ubuntu"><span class="toc-number">1.</span> <span class="toc-text">删除ubuntu</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#crouton-%E8%BF%9B%E9%98%B6%E4%BD%BF%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">crouton 进阶使用</span></a></li></ol>
+    </div>
+    
+    <h4 id="1-关于crouton"><a href="#1-关于crouton" class="headerlink" title="1.关于crouton"></a>1.关于crouton</h4><p>Chrome OS系统基于linux内核，crouton安装是基于chroot的。利用crouton可以在Chrome OS系统内装入精简的Ubuntu系统（可自行扩充），这种方式两系统的切换非常方便，<a target="_blank" rel="noopener" href="https://github.com/dnschneid/crouton">crouton文档</a>。 不过<strong>注意</strong>了，想达到<strong>日常使用</strong>的程度，<strong>机器的硬盘是有限且绝对不够用的</strong>，这就是为什么装入的ubuntu是精简的，为什么我要把系统转移到128g的sd卡上——<strong>不用担心</strong>，对于已经安装在硬盘的系统也可以像我一样把<strong>系统转移到便携储存</strong>上，具体在后详细叙述。</p>
+<h4 id="2-备份Chrome-OS"><a href="#2-备份Chrome-OS" class="headerlink" title="2.备份Chrome OS"></a>2.备份Chrome OS</h4><p><strong>折腾以前一定要对原Chrome OS系统进行备份</strong> Chrome网上应用商店搜索并下载Chromebook Recovery Utility，准备一个4G以上的U盘插入电脑，根据提示备份（U盘格式化）——话说我没做这一步，没出问题也是幸运。</p>
+<h4 id="3-进入开发者模式"><a href="#3-进入开发者模式" class="headerlink" title="3.进入开发者模式"></a>3.进入开发者模式</h4><p><strong>警告: 进入开放模式后，会清除此前硬盘中的所有数据！</strong> 按住Esc键、刷新键和电源按钮——顶部第一个、第四个、最后一个——进入恢复模式。听说有的Chromebook需要切换的物理开发者开关。 恢复屏幕上，按Ctrl+D，同意提示，启动进入开发人员模式。 步骤： 进入恢复模式——按 Ctrl+D——反正不是 Ctrl+D就是Enter，回车重启一次，再Ctrl+D，等一会，上面的进度条走完了之后再自动重启，接下来设置系统语言，开启调试模式(<strong>密码记牢了</strong>)，就进入开发者模式了。 以后每次开机都需要摁Ctrl+D跳过警告，否则迎接你的是30s后一声刺耳的尖鸣再进入系统——我承认，吓到过我，并且有了心理阴影。</p>
+<h4 id="动手能力强有基础的同学接下来可以参考本文首Crouton官方文档进行自定义安装"><a href="#动手能力强有基础的同学接下来可以参考本文首Crouton官方文档进行自定义安装" class="headerlink" title="动手能力强有基础的同学接下来可以参考本文首Crouton官方文档进行自定义安装"></a><strong><em>动手能力强有基础的同学接下来可以参考本文首Crouton官方文档进行自定义安装</em></strong></h4><h3 id="以下是我安装时的步骤："><a href="#以下是我安装时的步骤：" class="headerlink" title="以下是我安装时的步骤："></a>以下是我安装时的步骤：</h3><ol>
+<li><p> <a target="_blank" rel="noopener" href="https://www.lanzous.com/i9atvwb">下载crouton</a>请解压后仍然放入Downloads文件夹</p>
+</li>
+<li><p> Ctrl+Alt+T打开crosh，输入shell并回车</p>
+</li>
+<li><p> 这一步很关键：<strong>Ctrl+ALT+forward</strong>，然后登录<strong>root</strong>,密码之前设置的那个调试密码。之后输入命令<code>chromeos-setdevpasswd</code> 设置新密码，这个就是下一步sudo需要的密码。Ctrl+ALT+back回到浏览器。</p>
+</li>
+<li><p> <strong>确保CB全局接入万维网</strong>（不然可能在安装过程中卡住），输入<code>sudo sh ~/Downloads/crouton -t xfce</code> 输入<strong>上一步设置的密码</strong>开始安装，如果你想装unity桌面的话也可以<code>sudo sh ~/Downloads/crouton -t unity</code>，之后的教程默认xfce桌面</p>
+</li>
+<li><p> 安装进行中，网好30分钟，网差一两小时。喝杯咖啡或者泡壶茶，休息一会。如果异常中断试试sudo startxfce能否继续。</p>
+</li>
+<li><p> 安装的最后要求填入用户名和密码，建议与调试密码一致（非必须一致）</p>
+</li>
+<li><p>在shell中</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">sudo enter-chroot 进入终端</span><br><span class="line">sudo startunity 启动桌面</span><br><span class="line">sudo startxfce4 启动 xfce 桌面 </span><br></pre></td></tr></table></figure>
+
+
+</li>
+</ol>
+<p>在 Chrome os 和 Linux 之间切换： 从 C 到 L：shift + ctrl + alt + 前进键 从 L 到 C：shift + ctrl + alt + 后退键</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">### 其他命令（备用）</span><br><span class="line">#### 备份与恢复</span><br><span class="line">默认是存储在&#x2F;usr&#x2F;local&#x2F;chroots&#x2F;下，每个版本对应一个目录，***如&#x2F;usr&#x2F;local&#x2F;chroots&#x2F;xenial，所以chrootname为xenial***。</span><br><span class="line">所以chroots的备份和恢复：</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>  备份命令：sudo edit-chroot -b chrootname (生成文件precise-20141230-0321.tar.gz，将该文件mv到Downloads下面即可)</li>
+<li>  恢复命令:sudo edit-chroot -r chrootname //chrootname: 所安装 ubuntu 的版本代号</li>
+</ul>
+<h4 id="删除ubuntu"><a href="#删除ubuntu" class="headerlink" title="删除ubuntu"></a>删除ubuntu</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo delete-chroot chrootname </span><br><span class="line">&#x2F;&#x2F;chrootname: 所安装 ubuntu 的版本代号,详见备份与恢复</span><br></pre></td></tr></table></figure>
+
+<h4 id="crouton-进阶使用"><a href="#crouton-进阶使用" class="headerlink" title="crouton 进阶使用"></a>crouton 进阶使用</h4><p>使用 xiwi 先在 chrome 网上应用商店里下载 cronton-integration</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo sh ~&#x2F;Downloads&#x2F;crouton -t xfce,extension,xorg,xiwi &#x2F;&#x2F;我是在 xfce 桌面下使用的 unity 也可行 但要求下载 extension,xorg,xiwi</span><br><span class="line">sudo startxfce4 -X xiwi &#x2F;&#x2F; 使用 xiwi 来实现 窗口化</span><br></pre></td></tr></table></figure>
+
+<p>可以做到左边 chrome 右边 xfce 桌面</p>
+<p><a target="_blank" rel="noopener" href="http://bear962464.cn/2020/02/13/831/"><strong>返回Chromebook折腾全攻略</strong></a></p>
+
+  </div>
+
+</article>
+
+
+  <nav id="pagenavi">
+    
+    <a href="/2020/02/13/ubuntu新装环境配置/" class="prev">上一篇：ubuntu新装环境配置</a>
+    
+    
+    <a href="/2020/02/13/835/" class="next">下一篇：激活熟悉chromeos（罗列使用的插件）</a>
+    
+  </nav>
+
+        </div>
+        
+        
+      </div>
+      <footer id="footer" class="inner">
+        © 2020 - Bear -
+        <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
+        <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
+      </footer>
+    </div>
+  </div>
+  
+  <script async defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  <script async defer src="https://s5.cnzz.com/z_stat.php?id=1276809529&web_id=1276809529"></script>
+  
+</body>
+</html>

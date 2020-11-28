@@ -1,0 +1,172 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="http://example.com">
+  
+  <title>ubuntu libssl1.0.0:amd64降级失败 | 熊窝</title>
+  <meta name="author" content="Bear">
+  
+  <meta name="description" content="今天是过去最好的结果">
+  
+  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <meta property="og:title" content="ubuntu libssl1.0.0:amd64降级失败"/>
+  <meta property="og:site_name" content="熊窝"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="alternate" href="/atom.xml" title="熊窝" type="application/atom+xml">
+
+  <link rel="preload" as="style" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+  <link href="https://unpkg.com" rel="dns-prefetch" />
+  <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
+  <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div class="container">
+    <div class="left-col" style="background-image:url('/images/social/007S8ZIlgy1ggdmi6yapmj30dw0zk0wm.jpg')">
+      <div class="intrude-less">
+        <header id="header" class="inner">
+          <a href="/">
+            <div class="profilepic"><img src='/images/social/avatar.jpg'></div>
+          </a>
+          <div class="author-name"><a href="/">Bear</a></div>
+          <p class="aboutme">今天是过去最好的结果</p>
+          <nav id="main-nav">
+            <ul class="main">
+              
+              <li>
+                
+                  <a href="/archives">归档</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/categories">专题</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/friendlinks">友链</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/life">关于</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/search">搜索</a>
+                
+              </li>
+              
+            </ul>
+          </nav>
+          <nav id="sub-nav">
+            <div class="social">
+              
+              <a class="twitter" target="_blank" rel="noopener" href="https://twitter.com/" title="Twitter">Twitter</a>
+              
+              
+              
+              <a class="github" target="_blank" rel="noopener" href="https://github.com/" title="Github">Github</a>
+              
+              
+              <a class="yuque" target="_blank" rel="noopener" href="https://yuque.com/" title="语雀">语雀</a>
+              
+
+              
+              <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+              
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="mid-col">
+      <div class="mid-col-container">
+        <div id="content" class="inner">
+          <article class="post">
+
+  
+    <div class="meta">
+      
+<div class="date">
+
+<time datetime="2020-07-18T16:17:13.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  2020-07-19
+</time>
+
+
+
+
+
+</div>
+
+    </div>
+  
+  <h1 class="title" itemprop="name">ubuntu libssl1.0.0:amd64降级失败</h1>
+  <div class="entry-content" itemprop="articleBody">
+    
+    <div class="post-toc">
+      <div class="toc-title">TOC</div>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%B7%E5%9B%A0"><span class="toc-number">1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8A%A5%E9%94%99"><span class="toc-number">2.</span> <span class="toc-text">报错</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%A7%A3%E5%86%B3"><span class="toc-number">3.</span> <span class="toc-text">解决</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%8D%E6%80%9D"><span class="toc-number">4.</span> <span class="toc-text">反思</span></a></li></ol>
+    </div>
+    
+    <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>想降级libssl1.0.0,下载libssl1.0.0_1.0.2g-1ubuntu4.15_amd64单独降级导致dpkg卡住</p>
+<h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># sudo apt-get install libssl-dev                      :( 1 20-07-18 - 23:54:55</span></span><br><span class="line">正在读取软件包列表... 完成</span><br><span class="line">正在分析软件包的依赖关系树       </span><br><span class="line">正在读取状态信息... 完成       </span><br><span class="line">libssl-dev 已经是最新版 (1.0.2g-1ubuntu4.16)。</span><br><span class="line">libssl-dev 已设置为手动安装。</span><br><span class="line">您可能需要运行“apt-get -f install”来纠正下列错误：</span><br><span class="line">下列软件包有未满足的依赖关系：</span><br><span class="line"> libssl-dev : 依赖: libssl1.0.0 (= 1.0.2g-1ubuntu4.16) 但是 1.0.2g-1ubuntu4.15 正要被安装</span><br><span class="line"> libssl1.0.0 : 破坏: libssl1.0.0:i386 (!= 1.0.2g-1ubuntu4.15) 但是 1.0.2g-1ubuntu4.16 正要被安装</span><br><span class="line"> libssl1.0.0:i386 : 破坏: libssl1.0.0 (!= 1.0.2g-1ubuntu4.16) 但是 1.0.2g-1ubuntu4.15 正要被安装</span><br><span class="line">E: 有未能满足的依赖关系。请尝试不指明软件包的名字来运行“apt-get -f install”(也可以指定一个解决办法)。</span><br><span class="line"></span><br><span class="line"><span class="comment">###</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># dpkg --remove --force-remove-reinstreq libssl1.0.0:amd64 </span></span><br><span class="line">dpkg: 依赖问题阻止了卸载 libssl1.0.0:amd64 的操作：</span><br><span class="line"> libpython3.5-minimal:amd64 依赖于 libssl1.0.0 (&amp;gt;= 1.0.2~beta3).</span><br><span class="line"> libpython2.7-stdlib:amd64 依赖于 libssl1.0.0 (&amp;gt;= 1.0.2~beta3).</span><br><span class="line"> openssh-client 依赖于 libssl1.0.0 (&amp;gt;= 1.0.2).</span><br><span class="line"> libpodofo0.9.3 依赖于 libssl1.0.0 (&amp;gt;= 1.0.0).</span><br><span class="line"> libsasl2-modules:amd64 依赖于 libssl1.0.0 (&amp;gt;= 1.0.0).</span><br><span class="line"> libwinpr-sspi0.1:amd64 依赖于 libssl1.0.0 (&amp;gt;= 1.0.0).</span><br><span class="line"> wget 依赖于 libssl1.0.0 (&amp;gt;= 1.0.1).</span><br><span class="line"> sbsigntool 依赖于 libssl1.0.0 (&amp;gt;= 1.0.0).</span><br><span class="line"> openssl 依赖于 libssl1.0.0 (&amp;gt;= 1.0.2g).</span><br><span class="line"> libssh-4:amd64 依赖于 libssl1.0.0 (&amp;gt;= 1.0.0).</span><br><span class="line"> calibre-bin 依赖于 libssl1.0.0 (&amp;gt;= 1.0.0).</span><br><span class="line"> ntpdate 依赖于 libssl1.0.0 (&amp;gt;= 1.0.1d).</span><br><span class="line"> libfreerdp-core1.1:amd64 依赖于 libssl1.0.0 (&amp;gt;= 1.0.0).</span><br><span class="line"> netsurf-gtk 依赖于 libssl1.0.0 (&amp;gt;= 1.0.0).</span><br><span class="line"> gstreamer1.0-plugins-bad:amd64 依赖于 libssl1.0.0 (&amp;gt;= 1.0.1).</span><br><span class="line"> libfreerdp-crypto1.1:amd64 依赖于 libssl1.0.0 (&amp;gt;= 1.0.0).</span><br><span class="line"> wpasupplicant 依赖于 libssl1.0.0 (&amp;gt;= 1.0.1).</span><br><span class="line"> libssl-dev:amd64 依赖于 libssl1.0.0 (= 1.0.2g-1ubuntu4</span><br><span class="line">dpkg: 处理软件包 libssl1.0.0:amd64 (--remove)时出错：</span><br><span class="line"> 依赖问题 - 不会执行卸载</span><br><span class="line">在处理时有错误发生：</span><br><span class="line"> libssl1.0.0:amd64</span><br><span class="line"></span><br><span class="line"><span class="comment">###</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># dpkg -r --force-architecture libssl-dev:amd64             20-07-18 - 23:58:16</span></span><br><span class="line">dpkg: 依赖问题阻止了卸载 libssl-dev:amd64 的操作：</span><br><span class="line"> nodejs-dev 依赖于 libssl-dev (&amp;gt;= 1.0.0g).</span><br><span class="line">dpkg: 处理软件包 libssl-dev:amd64 (--remove)时出错：</span><br><span class="line"> 依赖问题 - 不会执行卸载</span><br><span class="line">在处理时有错误发生：</span><br><span class="line"> libssl-dev:amd64</span><br></pre></td></tr></table></figure>
+
+<h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#解决执行命令</span></span><br><span class="line">wget http://security.ubuntu.com/ubuntu/pool/main/o/openssl/libssl1.0.0_1.0.2g-1ubuntu4.16_amd64.deb</span><br><span class="line">sudo -i</span><br><span class="line">dpkg -r --force-all libssl-dev:amd64</span><br><span class="line">dpkg -i --force-all libssl1.0.0_1.0.2g-1ubuntu4.16_amd64.deb </span><br></pre></td></tr></table></figure>
+
+<p>再次尝试sudo apt install -f,自动修复成功 问题解决！</p>
+<h2 id="反思"><a href="#反思" class="headerlink" title="反思"></a>反思</h2><p>没事瞎搞啥。。。</p>
+
+  </div>
+
+</article>
+
+
+  <nav id="pagenavi">
+    
+    <a href="/2020/07/19/dpkg帮助/" class="prev">上一篇：dpkg帮助</a>
+    
+    
+    <a href="/2020/06/03/绝杀搜狗输入法618弹窗广告/" class="next">下一篇：绝杀搜狗输入法618弹窗广告</a>
+    
+  </nav>
+
+        </div>
+        
+        
+      </div>
+      <footer id="footer" class="inner">
+        © 2020 - Bear -
+        <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
+        <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
+      </footer>
+    </div>
+  </div>
+  
+  <script async defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  <script async defer src="https://s5.cnzz.com/z_stat.php?id=1276809529&web_id=1276809529"></script>
+  
+</body>
+</html>

@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="http://example.com">
+  
+  <title>10001 | 熊窝</title>
+  <meta name="author" content="Bear">
+  
+  <meta name="description" content="今天是过去最好的结果">
+  
+  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <meta property="og:title" content="10001"/>
+  <meta property="og:site_name" content="熊窝"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="alternate" href="/atom.xml" title="熊窝" type="application/atom+xml">
+
+  <link rel="preload" as="style" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+  <link href="https://unpkg.com" rel="dns-prefetch" />
+  <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
+  <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div class="container">
+    <div class="left-col" style="background-image:url('/images/social/007S8ZIlgy1ggdmi6yapmj30dw0zk0wm.jpg')">
+      <div class="intrude-less">
+        <header id="header" class="inner">
+          <a href="/">
+            <div class="profilepic"><img src='/images/social/avatar.jpg'></div>
+          </a>
+          <div class="author-name"><a href="/">Bear</a></div>
+          <p class="aboutme">今天是过去最好的结果</p>
+          <nav id="main-nav">
+            <ul class="main">
+              
+              <li>
+                
+                  <a href="/archives">归档</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/categories">专题</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/friendlinks">友链</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/life">关于</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/search">搜索</a>
+                
+              </li>
+              
+            </ul>
+          </nav>
+          <nav id="sub-nav">
+            <div class="social">
+              
+              <a class="twitter" target="_blank" rel="noopener" href="https://twitter.com/" title="Twitter">Twitter</a>
+              
+              
+              
+              <a class="github" target="_blank" rel="noopener" href="https://github.com/" title="Github">Github</a>
+              
+              
+              <a class="yuque" target="_blank" rel="noopener" href="https://yuque.com/" title="语雀">语雀</a>
+              
+
+              
+              <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+              
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="mid-col">
+      <div class="mid-col-container">
+        <div id="content" class="inner">
+          <article class="post">
+
+  
+    <div class="meta">
+      
+<div class="date">
+
+<time datetime="2019-08-12T07:26:27.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  2019-08-12
+</time>
+
+
+
+
+
+</div>
+
+    </div>
+  
+  <h1 class="title" itemprop="name">10001</h1>
+  <div class="entry-content" itemprop="articleBody">
+    
+    <p>/* 卡拉兹(Callatz)猜想： 对任何一个自然数n，如果它是偶数，那么把它砍掉一半；如果它是奇数，那么把(3n+1)砍掉一半。这样一直反复砍下去， 最后一定在某一步得到n=1。卡拉兹在1950年的世界数学家大会上公布了这个猜想，传说当时耶鲁大学师生齐动员， 拼命想证明这个貌似很傻很天真的命题，结果闹得学生们无心学业，一心只证(3n+1)，以至于有人说这是一个阴谋， 卡拉兹是在蓄意延缓美国数学界教学与科研的进展…… 我们今天的题目不是证明卡拉兹猜想，而是对给定的任一不超过1000的正整数n，简单地数一下，需要多少步（砍几下）才能得到n=1？ 输入格式：每个测试输入包含1个测试用例，即给出自然数n的值。 输出格式：输出从n计算到1需要的步数。 输入样例： 3 输出样例： 5 */ #include int main() { int n,count=0; scanf(“%d”,&amp;n); while(n!=1) { switch(n%2) { case 0 : n=n/2; count++; break; case 1 : n=(3*n+1)/2; count++; break; default : break; } } printf(“%d”,count); return 0; } #include int main() { int n,count=0; scanf(“%d”,&amp;n); while(n!=1) { count++; if(n%2==1) n=(3*n+1)/2; else n=n/2; } printf(“%d\n”,count); return 0; } #include int main() { int n,count=0; scanf(“%d”,&amp;n); for(;n!=1;) { count++; if(n%2==1) n=(3*n+1)/2; else n=n/2; } printf(“%d\n”,count); return 0; }</p>
+
+  </div>
+
+</article>
+
+
+  <nav id="pagenavi">
+    
+    <a href="/2019/08/30/10002/" class="prev">上一篇：10002</a>
+    
+    
+    <a href="/2019/08/12/windows系统下cmd命令大全/" class="next">下一篇：Windows系统下cmd命令大全</a>
+    
+  </nav>
+
+        </div>
+        
+        
+      </div>
+      <footer id="footer" class="inner">
+        © 2020 - Bear -
+        <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
+        <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
+      </footer>
+    </div>
+  </div>
+  
+  <script async defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  <script async defer src="https://s5.cnzz.com/z_stat.php?id=1276809529&web_id=1276809529"></script>
+  
+</body>
+</html>

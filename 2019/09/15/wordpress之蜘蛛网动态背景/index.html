@@ -1,0 +1,165 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="http://example.com">
+  
+  <title>wordpress之蜘蛛网动态背景 | 熊窝</title>
+  <meta name="author" content="Bear">
+  
+  <meta name="description" content="今天是过去最好的结果">
+  
+  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <meta property="og:title" content="wordpress之蜘蛛网动态背景"/>
+  <meta property="og:site_name" content="熊窝"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="alternate" href="/atom.xml" title="熊窝" type="application/atom+xml">
+
+  <link rel="preload" as="style" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+  <link href="https://unpkg.com" rel="dns-prefetch" />
+  <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
+  <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div class="container">
+    <div class="left-col" style="background-image:url('/images/social/007S8ZIlgy1ggdmi6yapmj30dw0zk0wm.jpg')">
+      <div class="intrude-less">
+        <header id="header" class="inner">
+          <a href="/">
+            <div class="profilepic"><img src='/images/social/avatar.jpg'></div>
+          </a>
+          <div class="author-name"><a href="/">Bear</a></div>
+          <p class="aboutme">今天是过去最好的结果</p>
+          <nav id="main-nav">
+            <ul class="main">
+              
+              <li>
+                
+                  <a href="/archives">归档</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/categories">专题</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/friendlinks">友链</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/life">关于</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/search">搜索</a>
+                
+              </li>
+              
+            </ul>
+          </nav>
+          <nav id="sub-nav">
+            <div class="social">
+              
+              <a class="twitter" target="_blank" rel="noopener" href="https://twitter.com/" title="Twitter">Twitter</a>
+              
+              
+              
+              <a class="github" target="_blank" rel="noopener" href="https://github.com/" title="Github">Github</a>
+              
+              
+              <a class="yuque" target="_blank" rel="noopener" href="https://yuque.com/" title="语雀">语雀</a>
+              
+
+              
+              <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+              
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="mid-col">
+      <div class="mid-col-container">
+        <div id="content" class="inner">
+          <article class="post">
+
+  
+    <div class="meta">
+      
+<div class="date">
+
+<time datetime="2019-09-15T14:28:29.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  2019-09-15
+</time>
+
+
+
+
+
+</div>
+
+    </div>
+  
+  <h1 class="title" itemprop="name">wordpress之蜘蛛网动态背景</h1>
+  <div class="entry-content" itemprop="articleBody">
+    
+    <p>在wordpress博客的背景加上鼠标跟随CSS3动态特效，效果如本站背景，线条随鼠标飘动</p>
+<p>安装方式：</p>
+<p>1.Wordpress里搜索插件 <strong>canvas-nest</strong></p>
+<p><img src="http://bear962464.cn/wp-content/uploads/2019/09/image-7-1024x60.png"></p>
+<p>2.代码（转载于 <a target="_blank" rel="noopener" href="https://oldpan.me/">https://oldpan.me/</a> ）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE HTML&gt;</span><br><span class="line">&lt;html&gt;  </span><br><span class="line">&lt;head&gt;                 </span><br><span class="line">&lt;meta http-equiv&#x3D;&quot;content-type&quot; content&#x3D;&quot;text&#x2F;html; charset&#x3D;UTF-8&quot;&gt;  </span><br><span class="line">&lt;title&gt;动态鼠标蜘蛛网特效&lt;&#x2F;title&gt;            </span><br><span class="line"> </span><br><span class="line">&lt;&#x2F;head&gt;</span><br><span class="line">&lt;body&gt; </span><br><span class="line"> </span><br><span class="line">&lt;&#x2F;body&gt;</span><br><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot; src&#x3D;&quot;https:&#x2F;&#x2F;cdn.bootcss.com&#x2F;canvas-nest.js&#x2F;1.0.1&#x2F;canvas-nest.min.js&quot;&gt;&lt;&#x2F;script&gt;　</span><br><span class="line">&lt;script&gt;</span><br><span class="line">!</span><br><span class="line">function() &#123;</span><br><span class="line">    function n(n, e, t) &#123;</span><br><span class="line">        return n.getAttribute(e)  t</span><br><span class="line">    &#125;</span><br><span class="line">    function e(n) &#123;</span><br><span class="line">        return document.getElementsByTagName(n)</span><br><span class="line">    &#125;</span><br><span class="line">    function t() &#123;</span><br><span class="line">        var t &#x3D; e(&quot;script&quot;),</span><br><span class="line">        o &#x3D; t.length,</span><br><span class="line">        i &#x3D; t[o - 1];</span><br><span class="line">        return &#123;</span><br><span class="line">            l: o,</span><br><span class="line">            z: n(i, &quot;zIndex&quot;, -1),</span><br><span class="line">            o: n(i, &quot;opacity&quot;, .5),</span><br><span class="line">            c: n(i, &quot;color&quot;, &quot;0,0,0&quot;),</span><br><span class="line">            n: n(i, &quot;count&quot;, 99)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    function o() &#123;</span><br><span class="line">        a &#x3D; m.width &#x3D; window.innerWidth  document.documentElement.clientWidth  document.body.clientWidth,</span><br><span class="line">        c &#x3D; m.height &#x3D; window.innerHeight  document.documentElement.clientHeight  document.body.clientHeight</span><br><span class="line">    &#125;</span><br><span class="line">    function i() &#123;</span><br><span class="line">        r.clearRect(0, 0, a, c);</span><br><span class="line">        var n, e, t, o, m, l;</span><br><span class="line">        s.forEach(function(i, x) &#123;</span><br><span class="line">            for (i.x +&#x3D; i.xa, i.y +&#x3D; i.ya, i.xa *&#x3D; i.x &gt; a  i.x &lt; 0 ? -1 : 1, i.ya *&#x3D; i.y &gt; c  i.y &lt; 0 ? -1 : 1, r.fillRect(i.x - .5, i.y - .5, 1, 1), e &#x3D; x + 1; e &lt; u.length; e++) n &#x3D; u[e],</span><br><span class="line">            null !&#x3D;&#x3D; n.x &amp;&amp; null !&#x3D;&#x3D; n.y &amp;&amp; (o &#x3D; i.x - n.x, m &#x3D; i.y - n.y, l &#x3D; o * o + m * m, l &lt; n.max &amp;&amp; (n &#x3D;&#x3D;&#x3D; y &amp;&amp; l &gt;&#x3D; n.max &#x2F; 2 &amp;&amp; (i.x -&#x3D; .03 * o, i.y -&#x3D; .03 * m), t &#x3D; (n.max - l) &#x2F; n.max, r.beginPath(), r.lineWidth &#x3D; t &#x2F; 2, r.strokeStyle &#x3D; &quot;rgba(&quot; + d.c + &quot;,&quot; + (t + .2) + &quot;)&quot;, r.moveTo(i.x, i.y), r.lineTo(n.x, n.y), r.stroke()))</span><br><span class="line">        &#125;),</span><br><span class="line">        x(i)</span><br><span class="line">    &#125;</span><br><span class="line">    var a, c, u, m &#x3D; document.createElement(&quot;canvas&quot;),</span><br><span class="line">    d &#x3D; t(),</span><br><span class="line">    l &#x3D; &quot;c_n&quot; + d.l,</span><br><span class="line">    r &#x3D; m.getContext(&quot;2d&quot;),</span><br><span class="line">    x &#x3D; window.requestAnimationFrame  window.webkitRequestAnimationFrame  window.mozRequestAnimationFrame  window.oRequestAnimationFrame  window.msRequestAnimationFrame </span><br><span class="line">    function(n) &#123;</span><br><span class="line">        window.setTimeout(n, 1e3 &#x2F; 45)</span><br><span class="line">    &#125;,</span><br><span class="line">    w &#x3D; Math.random,</span><br><span class="line">    y &#x3D; &#123;</span><br><span class="line">        x: null,</span><br><span class="line">        y: null,</span><br><span class="line">        max: 2e4</span><br><span class="line">    &#125;;</span><br><span class="line">    m.id &#x3D; l,</span><br><span class="line">    m.style.cssText &#x3D; &quot;position:fixed;top:0;left:0;z-index:&quot; + d.z + &quot;;opacity:&quot; + d.o,</span><br><span class="line">    e(&quot;body&quot;)[0].appendChild(m),</span><br><span class="line">    o(),</span><br><span class="line">    window.onresize &#x3D; o,</span><br><span class="line">    window.onmousemove &#x3D; function(n) &#123;</span><br><span class="line">        n &#x3D; n  window.event,</span><br><span class="line">        y.x &#x3D; n.clientX,</span><br><span class="line">        y.y &#x3D; n.clientY</span><br><span class="line">    &#125;,</span><br><span class="line">    window.onmouseout &#x3D; function() &#123;</span><br><span class="line">        y.x &#x3D; null,</span><br><span class="line">        y.y &#x3D; null</span><br><span class="line">    &#125;;</span><br><span class="line">    for (var s &#x3D; [], f &#x3D; 0; d.n &gt; f; f++) &#123;</span><br><span class="line">        var h &#x3D; w() * a,</span><br><span class="line">        g &#x3D; w() * c,</span><br><span class="line">        v &#x3D; 2 * w() - 1,</span><br><span class="line">        p &#x3D; 2 * w() - 1;</span><br><span class="line">        s.push(&#123;</span><br><span class="line">            x: h,</span><br><span class="line">            y: g,</span><br><span class="line">            xa: v,</span><br><span class="line">            ya: p,</span><br><span class="line">            max: 6e3</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    u &#x3D; s.concat([y]),</span><br><span class="line">    setTimeout(function() &#123;</span><br><span class="line">        i()</span><br><span class="line">    &#125;,</span><br><span class="line">    100)</span><br><span class="line">&#125; ();</span><br><span class="line">&lt;&#x2F;script&gt;</span><br><span class="line">&lt;&#x2F;html&gt;</span><br></pre></td></tr></table></figure>
+  </div>
+
+</article>
+
+
+  <nav id="pagenavi">
+    
+    <a href="/2019/09/18/挺有意思的，留下一点踪迹/" class="prev">上一篇：挺有意思的，留下一点踪迹</a>
+    
+    
+    <a href="/2019/09/15/wordpress之qq微信微博登录/" class="next">下一篇：wordpress之QQ微信微博登录</a>
+    
+  </nav>
+
+        </div>
+        
+        
+      </div>
+      <footer id="footer" class="inner">
+        © 2020 - Bear -
+        <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
+        <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
+      </footer>
+    </div>
+  </div>
+  
+  <script async defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  <script async defer src="https://s5.cnzz.com/z_stat.php?id=1276809529&web_id=1276809529"></script>
+  
+</body>
+</html>

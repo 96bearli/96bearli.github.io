@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="http://example.com">
+  
+  <title>linux（termux）文件管理常用命令 | 熊窝</title>
+  <meta name="author" content="Bear">
+  
+  <meta name="description" content="今天是过去最好的结果">
+  
+  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <meta property="og:title" content="linux（termux）文件管理常用命令"/>
+  <meta property="og:site_name" content="熊窝"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="alternate" href="/atom.xml" title="熊窝" type="application/atom+xml">
+
+  <link rel="preload" as="style" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+  <link href="https://unpkg.com" rel="dns-prefetch" />
+  <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
+  <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div class="container">
+    <div class="left-col" style="background-image:url('/images/social/007S8ZIlgy1ggdmi6yapmj30dw0zk0wm.jpg')">
+      <div class="intrude-less">
+        <header id="header" class="inner">
+          <a href="/">
+            <div class="profilepic"><img src='/images/social/avatar.jpg'></div>
+          </a>
+          <div class="author-name"><a href="/">Bear</a></div>
+          <p class="aboutme">今天是过去最好的结果</p>
+          <nav id="main-nav">
+            <ul class="main">
+              
+              <li>
+                
+                  <a href="/archives">归档</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/categories">专题</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/friendlinks">友链</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/life">关于</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/search">搜索</a>
+                
+              </li>
+              
+            </ul>
+          </nav>
+          <nav id="sub-nav">
+            <div class="social">
+              
+              <a class="twitter" target="_blank" rel="noopener" href="https://twitter.com/" title="Twitter">Twitter</a>
+              
+              
+              
+              <a class="github" target="_blank" rel="noopener" href="https://github.com/" title="Github">Github</a>
+              
+              
+              <a class="yuque" target="_blank" rel="noopener" href="https://yuque.com/" title="语雀">语雀</a>
+              
+
+              
+              <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+              
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="mid-col">
+      <div class="mid-col-container">
+        <div id="content" class="inner">
+          <article class="post">
+
+  
+    <div class="meta">
+      
+<div class="date">
+
+<time datetime="2019-10-27T15:24:11.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  2019-10-27
+</time>
+
+
+
+
+
+</div>
+
+    </div>
+  
+  <h1 class="title" itemprop="name">linux（termux）文件管理常用命令</h1>
+  <div class="entry-content" itemprop="articleBody">
+    
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本文可直接wget得到，配合tmux使用体验更佳。（文章末尾）</span><br></pre></td></tr></table></figure>
+
+<p>文件管理–增, 删, 改, 查</p>
+<p>pwd 显示工作目录的绝对路径（类似于windows电脑窗口的地址栏内容）</p>
+<p>mkdir,touch(创建新的文件);</p>
+<p>新建文件：touch 文件名 例：touch a.txt</p>
+<p>新建文件夹：mkdir 文件夹名(即目录名) 例：mkdir test</p>
+<p>mkdir -p /a/b/c #递归依次创建 /a , /a/b , /a/b/c<br>cp：</p>
+<p>复制文件：cp 源文件 目标位置或新文件名</p>
+<p>例：cp -v a.txt aa.txt 复制文件并显示(Verbose)执行过程</p>
+<p>复制文件夹：cp -rv 源文件夹名 目标位置或新文件夹名</p>
+<p>例：cp -rv test test-1 说明：-r是递归的意思，复制文件夹时必须用此选项</p>
+<p>重命名（移动mv）: mv 源文件名 目标位置或新文件名</p>
+<p>例：mv -v test-1 test-2</p>
+<p>删remove(rm)：</p>
+<p>用法： rm -rfv 文件名</p>
+<p>例：删除当前文件夹中的test、test-2、a.txt、aa.txt文件</p>
+<p>rm -rfv test test-2 a.txt aa.txt<br>说明：-r 是递归操作，删除目录时必须使用此选项</p>
+<p>-f 是强制(force)删除</p>
+<p>-v 是显示(verbose)执行过程<br>文件查找命令:cat ,head, tail, more, less</p>
+<p>1.看全文：cat 文件名 例1: cat /etc/hosts</p>
+<p>例2：cat -n /etc/passwd 看文件内容并显示行号(number)<br>2.看头几行(默认看头10行)：head -行数 文件名</p>
+<p>例：head -3 /etc/passwd 看头3行内容</p>
+<p>3.看最后几行(默认看尾部10行)：tail -行数 文件名</p>
+<p>例：tail -3 /etc/passwd 看尾部3行内容</p>
+<p>4.看更多(向下翻页显示)：more 文件名</p>
+<p>例：more /etc/passwd</p>
+<p>快捷键：空格键下翻一页，回车键下翻一行，q键退出(quit)</p>
+<p>5.看更少(上下翻页显示)：less 文件名</p>
+<p>例：less /etc/passwd</p>
+<p>快捷键：方向键上下左右翻，空格键或pagedown下翻一页，pageup键向上翻一页，回车键下翻一行，q键退出(quit)</p>
+<p><a target="_blank" rel="noopener" href="https://bear962464.cn/2019/10/27/640/">https://bear962464.cn/2019/10/27/640/</a></p>
+
+  </div>
+
+</article>
+
+
+  <nav id="pagenavi">
+    
+    <a href="/2019/10/27/linux常用命令（转）/" class="prev">上一篇：linux常用命令（转）</a>
+    
+    
+    <a href="/2019/10/27/clang使用示例/" class="next">下一篇：clang使用示例</a>
+    
+  </nav>
+
+        </div>
+        
+        
+      </div>
+      <footer id="footer" class="inner">
+        © 2020 - Bear -
+        <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
+        <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
+      </footer>
+    </div>
+  </div>
+  
+  <script async defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  <script async defer src="https://s5.cnzz.com/z_stat.php?id=1276809529&web_id=1276809529"></script>
+  
+</body>
+</html>

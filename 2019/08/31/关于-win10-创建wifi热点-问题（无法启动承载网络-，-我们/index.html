@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="http://example.com">
+  
+  <title>关于 win10 创建WiFi热点 问题 | 熊窝</title>
+  <meta name="author" content="Bear">
+  
+  <meta name="description" content="今天是过去最好的结果">
+  
+  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  <meta property="og:title" content="关于 win10 创建WiFi热点 问题"/>
+  <meta property="og:site_name" content="熊窝"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="alternate" href="/atom.xml" title="熊窝" type="application/atom+xml">
+
+  <link rel="preload" as="style" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+  <link href="https://unpkg.com" rel="dns-prefetch" />
+  <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
+  <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div class="container">
+    <div class="left-col" style="background-image:url('/images/social/007S8ZIlgy1ggdmi6yapmj30dw0zk0wm.jpg')">
+      <div class="intrude-less">
+        <header id="header" class="inner">
+          <a href="/">
+            <div class="profilepic"><img src='/images/social/avatar.jpg'></div>
+          </a>
+          <div class="author-name"><a href="/">Bear</a></div>
+          <p class="aboutme">今天是过去最好的结果</p>
+          <nav id="main-nav">
+            <ul class="main">
+              
+              <li>
+                
+                  <a href="/archives">归档</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/categories">专题</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/friendlinks">友链</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/life">关于</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/search">搜索</a>
+                
+              </li>
+              
+            </ul>
+          </nav>
+          <nav id="sub-nav">
+            <div class="social">
+              
+              <a class="twitter" target="_blank" rel="noopener" href="https://twitter.com/" title="Twitter">Twitter</a>
+              
+              
+              
+              <a class="github" target="_blank" rel="noopener" href="https://github.com/" title="Github">Github</a>
+              
+              
+              <a class="yuque" target="_blank" rel="noopener" href="https://yuque.com/" title="语雀">语雀</a>
+              
+
+              
+              <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+              
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="mid-col">
+      <div class="mid-col-container">
+        <div id="content" class="inner">
+          <article class="post">
+
+  
+    <div class="meta">
+      
+<div class="date">
+
+<time datetime="2019-08-31T03:49:39.000Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  2019-08-31
+</time>
+
+
+
+
+
+</div>
+
+    </div>
+  
+  <h1 class="title" itemprop="name">关于 win10 创建WiFi热点 问题</h1>
+  <div class="entry-content" itemprop="articleBody">
+    
+    <p>无法启动承载网络，组或资源的状态不是执行请求操作的正确状态 解决： 打开命令提示符，输入 netsh wlan show drivers 检查网卡驱动是否支持，找到一行「支持的承载网络」：若为否，如下图<img src="http://bear962464.cn/wp-content/uploads/2019/08/2FFFF60B@D3CE5141.25EE695D-300x125.png"> 造成以上的原因： 一般都是使用驱动精灵等软件更新了无线网卡驱动，因为win10系统有些无线网卡不能使用最新版的驱动，要安装win7或者win8系统下旧版本的驱动才能正常开启wifi，所以使用win10的用户不建议使用驱动精灵这一类软件更新无线网卡驱动。 解决方法： 简单说就是 回滚到旧无线网卡驱动 1. 右键“此电脑” -&gt; “管理” -&gt; “设备管理器” -&gt; “网络适配器” 找到无线网卡，一般名字里面带Wireless、bgn、/b/g/g、802.11、无线 这些关键字的就是无线网卡。</p>
+<ol>
+<li> 右击无线网卡，点更新驱动。依次如下操作，<img src="http://bear962464.cn/wp-content/uploads/2019/08/3601FE08@B2FA2A3F.25EE695D-300x93.png"></li>
+<li> 最后把这些可选驱动每一个都安装试试（点下一步安装），安装完一个就用WiFi共享大软件开启WiFi试试，直到不再提示无线网卡不支持承载为止。或用 netsh wlan show drivers 此命令，直到显示支持的承载网络：是</li>
+<li> 如果所有旧驱动安装后都不支持承载的话，就到笔记本的官网下载win7或者win8版本的无线网卡驱动手动安装（安装前最好先卸载之前的驱动），优先下载win7版本的，如果没有win7的在下载win8的。</li>
+<li> 实在不行，可以用驱动管理软件，去回滚驱动，我用的是 Driver Booster</li>
+</ol>
+<p>参考链接：<a target="_blank" rel="noopener" href="http://wifi.ggsafe.com/articles/20150820073323279.shtml">http://wifi.ggsafe.com/articles/20150820073323279.shtml</a> dengdeng Measure Measure</p>
+
+  </div>
+
+</article>
+
+
+  <nav id="pagenavi">
+    
+    <a href="/2019/09/01/记忆/" class="prev">上一篇：记忆</a>
+    
+    
+    <a href="/2019/08/31/c-常用函数介绍/" class="next">下一篇：C 常用函数介绍</a>
+    
+  </nav>
+
+        </div>
+        
+        
+      </div>
+      <footer id="footer" class="inner">
+        © 2020 - Bear -
+        <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
+        <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
+      </footer>
+    </div>
+  </div>
+  
+  <script async defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  <script async defer src="https://s5.cnzz.com/z_stat.php?id=1276809529&web_id=1276809529"></script>
+  
+</body>
+</html>

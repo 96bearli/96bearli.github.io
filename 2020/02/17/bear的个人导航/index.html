@@ -6,18 +6,23 @@
   <meta name="keywords" content="">
   <meta name="description" content="Bear的个人导航 | 熊窝">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<meta name="description" content="内网ssh连接主机shell脚本起因我有两台本本，日常一台性能本，win系统。还有一台chromebook，常用chroot-ubuntu系统，便携，看看资料啥的，也能编译一些东西，为了两台电脑的协作，想学一下用ssh连接 配置 安装openssh-server **  **openssh-clicent   iptables 使用 iptables开放22端口 看情况配置**&#x2F;etc&#x2F;ssh&#x2F;s">
+<meta name="description" content="解决you-get下载视频缓慢的问题  前言you-get是一款非常强大的gui程序，可以下载大量网站的视频，如果感兴趣请访问开源地址 在使用过程中我遇到了一个问题：下载视频被限速，速度不超过1Mbs甚至只有50kb&#x2F;s，面对漫长的下载时间不免等的心烦。 思考下载视频为什么被限速？我想也许这是官方在网站访问高峰时间限制爬虫爬取视频来保证真实用户的观看体验。 那官方是如何来识别是否是爬虫呢？通过访问">
 <meta property="og:type" content="article">
-<meta property="og:title" content="内网ssh连接主机shell脚本">
-<meta property="og:url" content="http://example.com/2021/01/04/%E5%86%85%E7%BD%91ssh%E8%BF%9E%E6%8E%A5%E4%B8%BB%E6%9C%BAshell%E8%84%9A%E6%9C%AC/index.html">
+<meta property="og:title" content="解决you-get下载视频缓慢的问题">
+<meta property="og:url" content="http://example.com/2021/01/04/%E8%A7%A3%E5%86%B3you-get%E4%B8%8B%E8%BD%BD%E8%A7%86%E9%A2%91%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98-1/index.html">
 <meta property="og:site_name" content="熊窝">
-<meta property="og:description" content="内网ssh连接主机shell脚本起因我有两台本本，日常一台性能本，win系统。还有一台chromebook，常用chroot-ubuntu系统，便携，看看资料啥的，也能编译一些东西，为了两台电脑的协作，想学一下用ssh连接 配置 安装openssh-server **  **openssh-clicent   iptables 使用 iptables开放22端口 看情况配置**&#x2F;etc&#x2F;ssh&#x2F;s">
+<meta property="og:description" content="解决you-get下载视频缓慢的问题  前言you-get是一款非常强大的gui程序，可以下载大量网站的视频，如果感兴趣请访问开源地址 在使用过程中我遇到了一个问题：下载视频被限速，速度不超过1Mbs甚至只有50kb&#x2F;s，面对漫长的下载时间不免等的心烦。 思考下载视频为什么被限速？我想也许这是官方在网站访问高峰时间限制爬虫爬取视频来保证真实用户的观看体验。 那官方是如何来识别是否是爬虫呢？通过访问">
 <meta property="og:locale">
-<meta property="article:published_time" content="2021-01-04T12:32:42.000Z">
-<meta property="article:modified_time" content="2021-01-04T12:34:54.848Z">
+<meta property="og:image" content="https://gitee.com/bearli/tu/raw/master/img/image-20210102194340579.png">
+<meta property="og:image" content="https://gitee.com/bearli/tu/raw/master/img/image-20210104031802749.png">
+<meta property="og:image" content="https://gitee.com/bearli/tu/raw/master/img/image-20210104201222514.png">
+<meta property="og:image" content="https://gitee.com/bearli/tu/raw/master/img/image-20210104034217673.png">
+<meta property="article:published_time" content="2021-01-04T12:59:52.000Z">
+<meta property="article:modified_time" content="2021-01-04T13:03:02.786Z">
 <meta property="article:author" content="Bear">
-<meta property="article:tag" content="linux">
+<meta property="article:tag" content="python">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/bearli/tu/raw/master/img/image-20210102194340579.png">
 
 
 <link rel="icon" href="/img/avatar.jpg">
@@ -502,19 +507,19 @@
     <nav id="title-list-nav">
         
         <a  class="All "
+           href="/2021/01/04/%E8%A7%A3%E5%86%B3you-get%E4%B8%8B%E8%BD%BD%E8%A7%86%E9%A2%91%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98-1/"
+           data-tag="python"
+           data-author="" >
+            <span class="post-title" title="解决you-get下载视频缓慢的问题">解决you-get下载视频缓慢的问题</span>
+            <span class="post-date" title="2021-01-04 20:59:52">2021/01/04</span>
+        </a>
+        
+        <a  class="All "
            href="/2021/01/04/%E5%86%85%E7%BD%91ssh%E8%BF%9E%E6%8E%A5%E4%B8%BB%E6%9C%BAshell%E8%84%9A%E6%9C%AC/"
            data-tag="linux"
            data-author="" >
             <span class="post-title" title="内网ssh连接主机shell脚本">内网ssh连接主机shell脚本</span>
             <span class="post-date" title="2021-01-04 20:32:42">2021/01/04</span>
-        </a>
-        
-        <a  class="All "
-           href="/2021/01/04/%E8%A7%A3%E5%86%B3you-get%E4%B8%8B%E8%BD%BD%E8%A7%86%E9%A2%91%E7%BC%93%E6%85%A2%E7%9A%84%E9%97%AE%E9%A2%98/"
-           data-tag="python"
-           data-author="" >
-            <span class="post-title" title="内网ssh连接主机shell脚本">内网ssh连接主机shell脚本</span>
-            <span class="post-date" title="2021-01-04 20:31:42">2021/01/04</span>
         </a>
         
         <a  class="All "
@@ -1242,7 +1247,7 @@
       
         <p>手头有个闲置的域名mieoo.com,还有一个闲置的免备案网页空间. 避免资源浪费建立了个人导航,纯静态的,还是半成品.</p>
 <p>传送门:<a target="_blank" rel="noopener" href="https://www.mieoo.com/" title="Bear的个人导航">Bear的个人导航</a></p>
-<p>PS:导航域名出售,有需要请联系<a href="mailto:&#98;&#101;&#x61;&#114;&#57;&#x36;&#x32;&#x34;&#x36;&#x34;&#x40;&#102;&#x6f;&#120;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;">&#98;&#101;&#x61;&#114;&#57;&#x36;&#x32;&#x34;&#x36;&#x34;&#x40;&#102;&#x6f;&#120;&#x6d;&#x61;&#x69;&#108;&#46;&#99;&#111;&#x6d;</a> <img src="https://bear962464.cn/wp-content/uploads/2019/10/Cute-stupid-Avatar-13-300x300.jpg"></p>
+<p>PS:导航域名出售,有需要请联系<a href="mailto:&#x62;&#101;&#97;&#114;&#57;&#54;&#50;&#52;&#54;&#x34;&#64;&#102;&#111;&#120;&#x6d;&#97;&#105;&#108;&#46;&#99;&#x6f;&#x6d;">&#x62;&#101;&#97;&#114;&#57;&#54;&#50;&#52;&#54;&#x34;&#64;&#102;&#111;&#120;&#x6d;&#97;&#105;&#108;&#46;&#99;&#x6f;&#x6d;</a> <img src="https://bear962464.cn/wp-content/uploads/2019/10/Cute-stupid-Avatar-13-300x300.jpg"></p>
 
       
        <hr><span style="font-style: italic;color: gray;"> 转载请注明来源，欢迎对文章中的引用来源进行考证，欢迎指出任何有错误或不够清晰的表达。可以在下面评论区评论，也可以邮件至 bearbearli@qq.com </span>

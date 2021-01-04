@@ -29,7 +29,7 @@
   <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
   <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
   
-<meta name="generator" content="Hexo 5.2.0"></head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 <body>
   <div class="container">
@@ -154,16 +154,13 @@
 </ol>
 <p>在 Chrome os 和 Linux 之间切换： 从 C 到 L：shift + ctrl + alt + 前进键 从 L 到 C：shift + ctrl + alt + 后退键</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">### 其他命令（备用）</span><br><span class="line">#### 备份与恢复</span><br><span class="line">默认是存储在&#x2F;usr&#x2F;local&#x2F;chroots&#x2F;下，每个版本对应一个目录，***如&#x2F;usr&#x2F;local&#x2F;chroots&#x2F;xenial，所以chrootname为xenial***。</span><br><span class="line">所以chroots的备份和恢复：</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>  备份命令：sudo edit-chroot -b chrootname (生成文件precise-20141230-0321.tar.gz，将该文件mv到Downloads下面即可)</li>
 <li>  恢复命令:sudo edit-chroot -r chrootname //chrootname: 所安装 ubuntu 的版本代号</li>
 </ul>
 <h4 id="删除ubuntu"><a href="#删除ubuntu" class="headerlink" title="删除ubuntu"></a>删除ubuntu</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo delete-chroot chrootname </span><br><span class="line">&#x2F;&#x2F;chrootname: 所安装 ubuntu 的版本代号,详见备份与恢复</span><br></pre></td></tr></table></figure>
-
 <h4 id="crouton-进阶使用"><a href="#crouton-进阶使用" class="headerlink" title="crouton 进阶使用"></a>crouton 进阶使用</h4><p>使用 xiwi 先在 chrome 网上应用商店里下载 cronton-integration</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo sh ~&#x2F;Downloads&#x2F;crouton -t xfce,extension,xorg,xiwi &#x2F;&#x2F;我是在 xfce 桌面下使用的 unity 也可行 但要求下载 extension,xorg,xiwi</span><br><span class="line">sudo startxfce4 -X xiwi &#x2F;&#x2F; 使用 xiwi 来实现 窗口化</span><br></pre></td></tr></table></figure>
-
 <p>可以做到左边 chrome 右边 xfce 桌面</p>
 <p><a target="_blank" rel="noopener" href="http://bear962464.cn/2020/02/13/831/"><strong>返回Chromebook折腾全攻略</strong></a></p>
 
@@ -186,7 +183,7 @@
         
       </div>
       <footer id="footer" class="inner">
-        © 2020 - Bear -
+        © 2021 - Bear -
         <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
         <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
       </footer>

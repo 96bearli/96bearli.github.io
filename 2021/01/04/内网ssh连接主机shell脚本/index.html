@@ -1,0 +1,175 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="dns-prefetch" href="http://example.com">
+  
+  <title>熊窝</title>
+  <meta name="author" content="Bear">
+  
+  <meta name="description" content="今天是过去最好的结果">
+  
+  
+  <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+
+  
+  <meta property="og:site_name" content="熊窝"/>
+
+  
+    <meta property="og:image" content=""/>
+  
+
+  <link rel="alternate" href="/atom.xml" title="熊窝" type="application/atom+xml">
+
+  <link rel="preload" as="style" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="https://github.githubassets.com/favicons/favicon.svg">
+  <link href="https://unpkg.com" rel="dns-prefetch" />
+  <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
+  <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
+  
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+<body>
+  <div class="container">
+    <div class="left-col" style="background-image:url('/images/social/007S8ZIlgy1ggdmi6yapmj30dw0zk0wm.jpg')">
+      <div class="intrude-less">
+        <header id="header" class="inner">
+          <a href="/">
+            <div class="profilepic"><img src='/images/social/avatar.jpg'></div>
+          </a>
+          <div class="author-name"><a href="/">Bear</a></div>
+          <p class="aboutme">今天是过去最好的结果</p>
+          <nav id="main-nav">
+            <ul class="main">
+              
+              <li>
+                
+                  <a href="/archives">归档</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/categories">专题</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/friendlinks">友链</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/life">关于</a>
+                
+              </li>
+              
+              <li>
+                
+                  <a href="/search">搜索</a>
+                
+              </li>
+              
+            </ul>
+          </nav>
+          <nav id="sub-nav">
+            <div class="social">
+              
+              <a class="twitter" target="_blank" rel="noopener" href="https://twitter.com/" title="Twitter">Twitter</a>
+              
+              
+              
+              <a class="github" target="_blank" rel="noopener" href="https://github.com/" title="Github">Github</a>
+              
+              
+              <a class="yuque" target="_blank" rel="noopener" href="https://yuque.com/" title="语雀">语雀</a>
+              
+
+              
+              <a class="rss" href="/atom.xml" title="RSS">RSS</a>
+              
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <div class="mid-col">
+      <div class="mid-col-container">
+        <div id="content" class="inner">
+          <article class="post">
+
+  
+    <div class="meta">
+      
+<div class="date">
+
+<time datetime="2021-01-04T12:20:54.123Z"
+      
+      data-updated="true"
+       itemprop="datePublished">
+  2021-01-04
+</time>
+
+
+
+
+
+</div>
+
+    </div>
+  
+  <h1 class="title" itemprop="name"></h1>
+  <div class="entry-content" itemprop="articleBody">
+    
+    <div class="post-toc">
+      <div class="toc-title">TOC</div>
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%86%85%E7%BD%91ssh%E8%BF%9E%E6%8E%A5%E4%B8%BB%E6%9C%BAshell%E8%84%9A%E6%9C%AC"><span class="toc-number">1.</span> <span class="toc-text">内网ssh连接主机shell脚本</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%B7%E5%9B%A0"><span class="toc-number">1.1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%85%8D%E7%BD%AE"><span class="toc-number">1.2.</span> <span class="toc-text">配置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Shell"><span class="toc-number">1.3.</span> <span class="toc-text">Shell</span></a></li></ol></li></ol>
+    </div>
+    
+    <h1 id="内网ssh连接主机shell脚本"><a href="#内网ssh连接主机shell脚本" class="headerlink" title="内网ssh连接主机shell脚本"></a>内网ssh连接主机shell脚本</h1><h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>我有两台本本，日常一台性能本，win系统。还有一台chromebook，常用chroot-ubuntu系统，便携，看看资料啥的，也能编译一些东西，为了两台电脑的协作，想学一下用ssh连接</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><ul>
+<li>安装<strong>openssh-server **  **openssh-clicent</strong>   <strong>iptables</strong></li>
+<li>使用 <strong>iptables</strong>开放<strong>22端口</strong></li>
+<li>看情况配置**/etc/ssh/sshd_config**，我加了个免密码</li>
+<li>开启ssh服务，ifconfig查看内网ip，win本xshell连接成功！</li>
+<li>为了方便使用和备忘写了个shell脚本</li>
+</ul>
+<h2 id="Shell"><a href="#Shell" class="headerlink" title="Shell"></a>Shell</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash">任意键继续的模块</span></span><br><span class="line">get_char()</span><br><span class="line">        &#123;</span><br><span class="line">        SAVEDSTTY=`stty -g`</span><br><span class="line">        stty -echo</span><br><span class="line">        stty cbreak</span><br><span class="line">        dd if=/dev/tty bs=1 count=1 2&gt; /dev/null</span><br><span class="line">        stty -raw</span><br><span class="line">        stty echo</span><br><span class="line">        stty $SAVEDSTTY</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">echo &quot;ssh相关脚本，请选择：&quot;</span><br><span class="line">echo &quot;1) Install openssh-server openssh-clicent iptables&quot;</span><br><span class="line">echo &quot;2) open22 &amp; service ssh restart&quot;</span><br><span class="line">echo &quot;3) open localhost:22&quot;</span><br><span class="line">echo &quot;4) service ssh stop&quot;</span><br><span class="line">echo &quot;5）check 22（requir lsof）&quot;</span><br><span class="line">echo &quot;6) Edit ur sshd_config（requir micro/vim/nano）&quot;</span><br><span class="line">echo &quot;7) Edit ur ip（requir micro/vim/nano）&quot;</span><br><span class="line">echo &quot;8) nothing&quot;</span><br><span class="line">read number</span><br><span class="line">case $number in</span><br><span class="line">1)echo &quot;首次使用，安装ssh服务,按任意键继续&quot;</span><br><span class="line">char=`get_char`</span><br><span class="line">sudo apt install openssh-client openssh-server iptables  </span><br><span class="line">;;</span><br><span class="line">2)echo &quot;开机一次性启动ssh-service，按任意键继续&quot;</span><br><span class="line">char=`get_char`</span><br><span class="line">sudo iptables -I INPUT -p tcp --dport 22 -j ACCEPT</span><br><span class="line">sudo service ssh restart</span><br><span class="line">;;</span><br><span class="line">3)echo &quot;单独开启22端口，按任意键继续&quot;</span><br><span class="line">char=`get_char`</span><br><span class="line">sudo iptables -I INPUT -p tcp --dport 22 -j ACCEPT</span><br><span class="line">;;</span><br><span class="line">4)echo &quot;结束ssh服务，按任意键继续&quot;</span><br><span class="line">char=`get_char`</span><br><span class="line">sudo service ssh stop</span><br><span class="line">;;</span><br><span class="line">5)echo &quot;查看22端口是否启用，按任意键继续&quot;</span><br><span class="line">char=`get_char`</span><br><span class="line">sudo lsof -i:22</span><br><span class="line">echo 如果上边有列表信息代表22开启</span><br><span class="line">;;</span><br><span class="line">6)echo &quot;编辑ssh服务配置（含更改22，密码，root选项）按任意键继续&quot;</span><br><span class="line">echo &quot;Please edit /etc/ssh/sshd_config&quot;</span><br><span class="line">char=`get_char`</span><br><span class="line">sudo micro /etc/ssh/sshd_config</span><br><span class="line">;;</span><br><span class="line">7)echo &quot;设置固定ip-test，按任意键继续&quot;</span><br><span class="line">echo &quot;Please edit /etc/network/interfacesces&quot;</span><br><span class="line">char=`get_char`</span><br><span class="line">sudo micro /etc/network/interfacesces</span><br><span class="line">;;</span><br><span class="line">8)echo &quot;关于&quot;</span><br><span class="line">echo &quot;作者：96bearli&quot;</span><br><span class="line">echo &quot;Blog:https://bear962464.cn&quot;</span><br><span class="line">echo &quot;Blog:https://96bearli.github.io&quot;</span><br><span class="line">echo &quot;Time:2021.01.04 19:05&quot;</span><br><span class="line">char=`get_char`</span><br><span class="line">;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+
+
+  </div>
+
+</article>
+
+
+  <nav id="pagenavi">
+    
+    <a href="/2021/01/04/解决you-get下载视频缓慢的问题/" class="prev">上一篇：</a>
+    
+    
+    <a href="/2020/11/28/hello-world/" class="next">下一篇：Hello World</a>
+    
+  </nav>
+
+        </div>
+        
+        
+      </div>
+      <footer id="footer" class="inner">
+        © 2021 - Bear -
+        <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
+        <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
+      </footer>
+    </div>
+  </div>
+  
+  <script async defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+  <script async defer src="https://s5.cnzz.com/z_stat.php?id=1276809529&web_id=1276809529"></script>
+  
+</body>
+</html>

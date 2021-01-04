@@ -29,7 +29,7 @@
   <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
   <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
   
-<meta name="generator" content="Hexo 5.2.0"></head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 <body>
   <div class="container">
@@ -135,9 +135,7 @@
 <h3 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h3><p>输入在一行中给出2个整数，分别是四位数字表示的起始时间、以及流逝的分钟数，其间以空格分隔。注意：在起始时间中，当小时为个位数时，没有前导的零，即5点30分表示为530；流逝的分钟数可能超过60，也可能是负数。</p>
 <h3 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h3><p>输出四位数字表示的终止时间。题目保证起始时间和终止时间在同一天内。</p>
 <h3 id="输入样例："><a href="#输入样例：" class="headerlink" title="输入样例："></a>输入样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1120 110</span><br></pre></td></tr></table></figure>
-
 <h3 id="输出样例："><a href="#输出样例：" class="headerlink" title="输出样例："></a>输出样例：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1310</span><br></pre></td></tr></table></figure>
-
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">#include&lt;stdio.h&gt;</span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">int aa,ab;</span><br><span class="line">int time;</span><br><span class="line">scanf(&quot;%d %d&quot;,&amp;aa,&amp;time);</span><br><span class="line">ab&#x3D;aa%100+time%60;</span><br><span class="line">if(ab&gt;&#x3D;60)</span><br><span class="line">&#123;</span><br><span class="line">aa&#x3D;aa&#x2F;100+time&#x2F;60+ab&#x2F;60;</span><br><span class="line">ab&#x3D;ab%60;</span><br><span class="line">&#125;</span><br><span class="line">else if(ab&lt;0)</span><br><span class="line">&#123;</span><br><span class="line">aa&#x3D;aa&#x2F;100+time&#x2F;60-1-ab&#x2F;60;</span><br><span class="line">ab&#x3D;ab%60+60;</span><br><span class="line">&#125;</span><br><span class="line">else</span><br><span class="line">&#123;</span><br><span class="line">aa&#x3D;aa&#x2F;100+time&#x2F;60;</span><br><span class="line">ab&#x3D;ab%60;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F;printf(&quot;%d%d\n&quot;,aa,ab);</span><br><span class="line">aa&#x3D;100*aa+ab;</span><br><span class="line">printf(&quot;%d&quot;,aa);</span><br><span class="line">return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
   </div>
 
@@ -158,7 +156,7 @@
         
       </div>
       <footer id="footer" class="inner">
-        © 2020 - Bear -
+        © 2021 - Bear -
         <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
         <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
       </footer>

@@ -29,7 +29,7 @@
   <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
   <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
   
-<meta name="generator" content="Hexo 5.2.0"></head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 <body>
   <div class="container">
@@ -191,45 +191,32 @@
 </ol>
 <p>在 Chrome os 和 Linux 之间切换： 从 C 到 L：shift + ctrl + alt + 前进键 从 L 到 C：shift + ctrl + alt + 后退键</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">### 其他命令（备用）</span><br><span class="line">#### 备份与恢复</span><br><span class="line">默认是存储在&#x2F;usr&#x2F;local&#x2F;chroots&#x2F;下，每个版本对应一个目录，***如&#x2F;usr&#x2F;local&#x2F;chroots&#x2F;xenial，所以chrootname为xenial***。</span><br><span class="line">所以chroots的备份和恢复：</span><br></pre></td></tr></table></figure>
-
 <ul>
 <li>  备份命令：sudo edit-chroot -b chrootname (生成文件precise-20141230-0321.tar.gz，将该文件mv到Downloads下面即可)</li>
 <li>  恢复命令:sudo edit-chroot -r chrootname //chrootname: 所安装 ubuntu 的版本代号</li>
 </ul>
 <h4 id="删除ubuntu"><a href="#删除ubuntu" class="headerlink" title="删除ubuntu"></a>删除ubuntu</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo delete-chroot chrootname </span><br><span class="line">&#x2F;&#x2F;chrootname: 所安装 ubuntu 的版本代号,详见备份与恢复</span><br></pre></td></tr></table></figure>
-
 <h4 id="crouton-进阶使用"><a href="#crouton-进阶使用" class="headerlink" title="crouton 进阶使用"></a>crouton 进阶使用</h4><p>使用 xiwi 先在 chrome 网上应用商店里下载 cronton-integration</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo sh ~&#x2F;Downloads&#x2F;crouton -t xfce,extension,xorg,xiwi &#x2F;&#x2F;我是在 xfce 桌面下使用的 unity 也可行 但要求下载 extension,xorg,xiwi</span><br><span class="line">sudo startxfce4 -X xiwi &#x2F;&#x2F; 使用 xiwi 来实现 窗口化</span><br></pre></td></tr></table></figure>
-
 <p>可以做到左边 chrome 右边 xfce 桌面</p>
 <h3 id="4-环境配置，xfce4美化，安装日常软件"><a href="#4-环境配置，xfce4美化，安装日常软件" class="headerlink" title="4. 环境配置，xfce4美化，安装日常软件"></a>4. 环境配置，xfce4美化，安装日常软件</h3><p>先看结果 <img src="https://bear.bear962464.cn/my/20200213025436.png" alt="美化"></p>
 <h4 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h4><p>进入桌面打开命令行，快捷键ctrl+T没反应的话alt+F3搜索term，建议使用xfce终端</p>
 <h5 id="建议换源"><a href="#建议换源" class="headerlink" title="建议换源"></a>建议换源</h5><p>不同版本换的源不同，建议了解后自行更改，不改也可，用国内网apt会比较慢</p>
 <h5 id="首次进入桌面"><a href="#首次进入桌面" class="headerlink" title="首次进入桌面"></a>首次进入桌面</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt upgrade</span><br></pre></td></tr></table></figure>
-
 <h5 id="设置中文环境"><a href="#设置中文环境" class="headerlink" title="设置中文环境"></a>设置中文环境</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install language-pack-zh-hans language-pack-zh-hans-base language-pack-gnome-zh-hans language-pack-gnome-zh-hans-base</span><br><span class="line"></span><br><span class="line">sudo apt-get install &amp;#x60;check-language-support -l zh&amp;#x60;</span><br><span class="line"></span><br><span class="line">sudo localectl set-locale LANG&#x3D;zh_CN.UTF-8</span><br></pre></td></tr></table></figure>
-
 <p>//重启后生效</p>
 <p>对于中文乱码是空格的情况，安装中文字体解决</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install fonts-droid-fallback ttf-wqy-zenhei ttf-wqy-microhei fonts-arphic-ukai fonts-arphic-uming</span><br></pre></td></tr></table></figure>
-
 <h5 id="卸载不必要的软件"><a href="#卸载不必要的软件" class="headerlink" title="卸载不必要的软件"></a>卸载不必要的软件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get remove libreoffice-common -y          &#x2F;&#x2F;删除 libreoffice</span><br><span class="line">sudo apt-get remove unity-webapps-common -y        &#x2F;&#x2F;删除 amazon</span><br><span class="line">sudo apt-get remove thunderbird totem rhythmbox empathy brasero simple-scan gnome-mahjongg aisleriot gnome-mines cheese transmission-common gnome-orca webbrowser-app gnome-sudoku  landscape-client-ui-install onboard deja-dup -y</span><br></pre></td></tr></table></figure>
-
 <h5 id="安装常用软件"><a href="#安装常用软件" class="headerlink" title="安装常用软件"></a>安装常用软件</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apt install g++ git unrar unzip vim nano </span><br><span class="line">&#x2F;&#x2F;以上最好安装，以下可选</span><br><span class="line">sudo apt install gedit</span><br></pre></td></tr></table></figure>
-
 <h5 id="主题配置"><a href="#主题配置" class="headerlink" title="主题配置"></a>主题配置</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">wget -q -O - http:&#x2F;&#x2F;archive.getdeb.net&#x2F;getdeb-archive.key  sudo apt-key add -</span><br><span class="line">sudo sh -c &amp;#039;echo &quot;deb http:&#x2F;&#x2F;archive.getdeb.net&#x2F;ubuntu xenial-getdeb apps&quot; &gt;&gt; &#x2F;etc&#x2F;apt&#x2F;sources.list.d&#x2F;getdeb.list&amp;#039;</span><br><span class="line">sudo add-apt-repository ppa:noobslab&#x2F;themes</span><br><span class="line">sudo add-apt-repository ppa:noobslab&#x2F;icons</span><br><span class="line">sudo apt-get update</span><br><span class="line">sudo apt-get install ubuntu-tweak -y</span><br><span class="line">sudo apt-get install flatabulous-theme -y</span><br><span class="line">sudo apt-get install ultra-flat-icons -y</span><br><span class="line">sudo apt-get install vpnc git -y</span><br></pre></td></tr></table></figure>
-
 <h1 id="xfce4美化等待更新"><a href="#xfce4美化等待更新" class="headerlink" title="xfce4美化等待更新"></a>xfce4美化等待更新</h1><h1 id="系统转移sd卡"><a href="#系统转移sd卡" class="headerlink" title="系统转移sd卡"></a><a target="_blank" rel="noopener" href="https://bear962464.cn/2020/05/26/954/" title="系统转移sd卡等待更新">系统转移sd卡</a></h1><p>材料：一个U盘（FAT32格式，其他格式可能出错），sd卡一张（高速，较大容量，作为系统盘）</p>
 <h2 id="1-设置sd卡"><a href="#1-设置sd卡" class="headerlink" title="1.设置sd卡"></a>1.设置sd卡</h2><p>插入sd卡，ctrl+alt+t shell</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">sudo -i</span><br><span class="line"><span class="meta">#</span><span class="bash">列出当前所有设备</span></span><br><span class="line">fdisk -l</span><br><span class="line"><span class="meta">#</span><span class="bash">找到SD卡，比如我的是/dev/sdc1,将其卸载</span></span><br><span class="line">umount /dev/sdc1</span><br><span class="line"><span class="meta">#</span><span class="bash">把设备格式化成ext4</span></span><br><span class="line">mkfs.ext4 /dev/sdc1</span><br><span class="line"><span class="meta">#</span><span class="bash">添加linux文件夹</span></span><br><span class="line">mkdir /media/removable/linux</span><br><span class="line"><span class="meta">#</span><span class="bash">把设备挂载到linux文件夹下</span></span><br><span class="line">mount /dev/mmcblk1 /media/removable/linux</span><br><span class="line">chmod 777 -R /dev /media/removable</span><br></pre></td></tr></table></figure>
-
 <h2 id="2-备份系统"><a href="#2-备份系统" class="headerlink" title="2.备份系统"></a>2.备份系统</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">cd /usr/local/chroots/</span><br><span class="line"><span class="meta">#</span><span class="bash">找到安装的linux名</span></span><br><span class="line"><span class="meta">#</span><span class="bash">如/usr/<span class="built_in">local</span>/chroots/xenial，所以chrootname为xenial</span></span><br><span class="line">sudo edit-chroot -b chrootname</span><br><span class="line"><span class="meta">#</span><span class="bash">当前目录生成文件xxxxx.tar.gz，将该文件mv到Downloads下面即可</span></span><br><span class="line"><span class="meta">#</span><span class="bash">空间紧张就移动到U盘</span></span><br><span class="line"><span class="meta">#</span><span class="bash">删除原有系统（可选）</span></span><br><span class="line">sudo delete-chroot chrootname</span><br></pre></td></tr></table></figure>
-
 <h2 id="3-恢复系统到SD卡"><a href="#3-恢复系统到SD卡" class="headerlink" title="3.恢复系统到SD卡"></a>3.恢复系统到SD卡</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">-f指向备份文件，-p指向安装位置（sd卡）</span></span><br><span class="line">sudo sh ~/Downloads/crouton -f mybackup.tar.gz -p /media/removable/linux</span><br></pre></td></tr></table></figure>
-
 <h2 id="4-运行命令"><a href="#4-运行命令" class="headerlink" title="4.运行命令"></a>4.运行命令</h2><p>每次重启后都要运行以下命令来启动ubuntu，建议./xxx.sh运行</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/sh</span></span><br><span class="line">sudo umount /dev/sdb1</span><br><span class="line">sudo mkdir /media/removable/linux</span><br><span class="line">sudo mount /dev/sdb1 /media/removable/linux</span><br><span class="line">sudo media/removable/linux/bin/startxfce4</span><br></pre></td></tr></table></figure>
-
 <p>进入终端把line5改成</p>
 <p><code>sudo media/removable/linux/bin/enter-chroot</code></p>
 <h4 id="致谢和资料"><a href="#致谢和资料" class="headerlink" title="致谢和资料"></a>致谢和资料</h4><p><strong>感谢几位的无畏折腾和无私奉献，替后来人趟过了各种坑！</strong></p>
@@ -260,7 +247,7 @@
         
       </div>
       <footer id="footer" class="inner">
-        © 2020 - Bear -
+        © 2021 - Bear -
         <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
         <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
       </footer>

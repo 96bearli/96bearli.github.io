@@ -29,7 +29,7 @@
   <link href="https://busuanzi.ibruce.info" rel="dns-prefetch" />
   <link href="https://cdn1.lncld.net" rel="dns-prefetch" />
   
-<meta name="generator" content="Hexo 5.2.0"></head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 <body>
   <div class="container">
@@ -127,13 +127,10 @@
     
     <p>apt install设置触发python3.5报错 尝试删除python3.5报错信息如下</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm: cannot remove ‘/usr/lib/python3.5/__pycache__ /_compression.cpython-35.pyc ’: Input/output error</span><br></pre></td></tr></table></figure>
-
 <p>尝试手动删除失败 查询后得知对文件系统进行修复可以解决 使用命令fsck 我是在chromebook运行的chroot，于是在chromeos中使用sudo fdisk -l查询分区路径 得到路径/dev/sdb1</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">检测命令,全部y，也可加入-a</span></span><br><span class="line">fsck.ext3 /dev/sdb1</span><br></pre></td></tr></table></figure>
-
 <p>重启后可以删除_compression.cpython-35.pyc 了，但是并没有解决apt install设置触发python3.5报错的问题</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Errors were encountered while processing:</span><br><span class="line">   python3.5</span><br><span class="line">   dh-python</span><br><span class="line">   python3</span><br><span class="line">E: Sub-process /usr/bin/dpkg returned an error code (1)</span><br></pre></td></tr></table></figure>
-
 <p>继续尝试</p>
 
   </div>
@@ -155,7 +152,7 @@
         
       </div>
       <footer id="footer" class="inner">
-        © 2020 - Bear -
+        © 2021 - Bear -
         <span id="busuanzi_container_site_pv">PV <span id="busuanzi_value_site_pv"></span></span>
         <p>Powered by <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a> & <a target="_blank" rel="noopener" href="https://github.com/thinkerchan/hexo-theme-greyshade">GreyShade</a></p>
       </footer>
